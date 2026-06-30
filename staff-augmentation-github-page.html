@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Team as a Service</title>
+  <title>Staff Augmentation</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
@@ -1536,81 +1536,136 @@
         font-size: 14px;
       }
     }
+
+
+    /* ================= STAFF AUGMENTATION PAGE OVERRIDES ================= */
+    .gcc-usecase-icon {
+      background: transparent;
+      box-shadow: none;
+      overflow: hidden;
+    }
+
+    .gcc-usecase-icon img {
+      width: 56px;
+      height: 56px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .gcc-hero-service-img {
+      width: min(100%, 380px);
+      height: auto;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 18px 38px rgba(90, 190, 134, 0.16));
+    }
+
+    .gcc-active-card-bottom strong {
+      display: block;
+      margin: 0 0 14px;
+      color: #5abe86;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 500;
+      letter-spacing: -0.18px;
+    }
+
+    .gcc-active-card-bottom ul + strong {
+      margin-top: 18px;
+    }
+
+    .gcc-process-card.active {
+      flex: 4.5;
+    }
+
+    .gcc-process-card {
+      min-height: 540px;
+    }
+
+    @media (max-width: 991px) {
+      .gcc-process-card {
+        min-height: 108px;
+      }
+      .gcc-process-card.active {
+        min-height: 580px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gcc-hero-service-img {
+        width: min(100%, 280px);
+      }
+      .gcc-active-card-bottom strong {
+        font-size: 14px;
+      }
+      .gcc-process-card.active {
+        min-height: 680px;
+      }
+    }
 </style>
 </head>
 <body>
   <div class="gcc-page">
 
-
     <!-- HERO -->
     <section class="gcc-hero">
       <div class="gcc-container gcc-hero-inner">
         <div class="gcc-hero-copy-wrap">
-          <p class="gcc-hero-label">Outcome-Driven Model</p>
+          <p class="gcc-hero-label">Time &amp; Material Model</p>
 
-          <h1>Team as a Service</h1>
+          <h1>Staff Augmentation</h1>
 
           <p class="gcc-hero-copy">
-            We build, manage, and run dedicated teams end-to-end so you can focus on scaling your business.
+            Access pre-vetted talent on demand — hire by the hour, day, or project duration, and scale your team without long-term commitments.
           </p>
 
           <div class="gcc-hero-tags">
-            <span>Fully managed teams</span>
-            <span>Outcome-driven delivery</span>
-            <span>Predictable costs</span>
-            <span>Built to scale</span>
-            <span>No HR overhead</span>
-            <span>Dedicated account manager</span>
+            <span>Top Talent</span>
             <span>Easy Contract Terms</span>
+            <span>Days, not Weeks</span>
+            <span>Best Pricing</span>
+            <span>Replacement Guarantee</span>
+            <span>Direct Management</span>
+            <span>Data Security</span>
           </div>
         </div>
 
         <div class="gcc-hero-visual" aria-hidden="true">
-          <svg class="hero-img" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.95" stroke="#5ABE86" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="210" cy="210" r="86"/>
-              <circle cx="210" cy="178" r="22"/>
-              <path d="M166 248c15-25 73-25 88 0"/>
-              <path d="M210 82v42M210 296v42M82 210h42M296 210h42M119 119l30 30M271 271l30 30M301 119l-30 30M149 271l-30 30"/>
-              <circle cx="210" cy="60" r="23"/>
-              <circle cx="210" cy="360" r="23"/>
-              <circle cx="60" cy="210" r="23"/>
-              <circle cx="360" cy="210" r="23"/>
-              <circle cx="101" cy="101" r="23"/>
-              <circle cx="319" cy="319" r="23"/>
-              <circle cx="319" cy="101" r="23"/>
-              <circle cx="101" cy="319" r="23"/>
-            </g>
-          </svg>
+          <img
+            class="gcc-hero-service-img"
+            src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Headling%20%2B%20Subline.png"
+            alt="Staff augmentation illustration"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
 
-    <!-- FULLY MANAGED TEAM -->
+    <!-- FLEXIBLE HIRING -->
     <section class="gcc-managed-team" id="why-us">
       <div class="gcc-container gcc-managed-grid">
         <div class="gcc-managed-image">
           <img
-  src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/b93fd7dd29b274747c5eda36ce3bc69a42350c1b.jpg"
-  alt="Team meeting in office"
-  loading="lazy"
-/>
+            src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/b93fd7dd29b274747c5eda36ce3bc69a42350c1b.jpg"
+            alt="Team meeting in office"
+            loading="lazy"
+          />
         </div>
 
         <div class="gcc-managed-copy">
-          <p class="gcc-label"><span class="gcc-label-strong">Fully</span> Managed Team</p>
+          <p class="gcc-label"><span class="gcc-label-strong">Flexible</span> Hiring</p>
 
           <h2 class="gcc-section-title">
-            We don’t just provide teams<br />we deliver outcomes
+            Bring in the right talent, exactly when you need it — without long hiring cycles or long-term commitments
           </h2>
 
           <div class="gcc-managed-spacer"></div>
 
           <p class="gcc-section-copy">
-            We build, manage, and run dedicated teams aligned to your goals. From hiring and onboarding to performance and delivery, everything is handled end-to-end so you can focus on growth, not operations.
+            Hire pre-vetted professionals for short-term projects, urgent needs, or specialized roles without the overhead of full-time hiring. You stay in control while we handle sourcing, vetting, and onboarding.
           </p>
 
-          <strong>Predictable delivery • Clear accountability • Teams that scale.</strong>
+          <strong>Pre-vetted talent • Rapid Scaling • Flexible engagement.</strong>
         </div>
       </div>
     </section>
@@ -1622,87 +1677,63 @@
           <p class="gcc-label"><span class="gcc-label-strong">Use</span> Cases</p>
 
           <h2 class="gcc-section-title">
-            When you need<br />outcomes — not just resources
+            When you need talent <br />— fast and on demand
           </h2>
 
           <p class="gcc-section-copy">
-            This model is ideal when you want a fully managed team with clear ownership, predictable delivery, and no operational overhead.
+            Staff augmentation is ideal when you need the right talent quickly without long hiring cycles or long-term commitments.
           </p>
         </div>
 
-       <div class="gcc-usecases-grid">
-  <article class="gcc-usecase-card">
-    <span class="gcc-usecase-icon">
-      <img
-        src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(5).png"
-        alt="Full team delivery icon"
-        loading="lazy"
-      />
-    </span>
-    <h3>Full team delivery</h3>
-    <p>Get an entire function delivered from QA to development or operations.</p>
-  </article>
+        <div class="gcc-usecases-grid">
+          <article class="gcc-usecase-card">
+            <span class="gcc-usecase-icon">
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(5).png" alt="Short-term projects icon" loading="lazy" />
+            </span>
+            <h3>Short-term projects</h3>
+            <p>Support sprints, launches, campaigns, or migrations with the right talent.</p>
+          </article>
 
-  <article class="gcc-usecase-card">
-    <span class="gcc-usecase-icon">
-      <img
-        src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(4).png"
-        alt="Predictable monthly costs icon"
-        loading="lazy"
-      />
-    </span>
-    <h3>Predictable monthly costs</h3>
-    <p>Defined deliverables with no HR or management overhead.</p>
-  </article>
+          <article class="gcc-usecase-card">
+            <span class="gcc-usecase-icon">
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(4).png" alt="Temporary gaps icon" loading="lazy" />
+            </span>
+            <h3>Temporary gaps</h3>
+            <p>Cover leaves, or sudden workload spikes without slowing down your team.</p>
+          </article>
 
-  <article class="gcc-usecase-card">
-    <span class="gcc-usecase-icon">
-      <img
-        src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(3).png"
-        alt="Scaling fast icon"
-        loading="lazy"
-      />
-    </span>
-    <h3>Scaling fast</h3>
-    <p>Grow your team without slowing down operations.</p>
-  </article>
+          <article class="gcc-usecase-card">
+            <span class="gcc-usecase-icon">
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(3).png" alt="Missing expertise icon" loading="lazy" />
+            </span>
+            <h3>Missing expertise</h3>
+            <p>Bring in specialized skills your team doesn’t have on demand.</p>
+          </article>
 
-  <article class="gcc-usecase-card">
-    <span class="gcc-usecase-icon">
-      <img
-        src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card.png"
-        alt="End-to-end ownership icon"
-        loading="lazy"
-      />
-    </span>
-    <h3>End-to-end ownership</h3>
-    <p>We handle hiring, onboarding, management, and performance.</p>
-  </article>
+          <article class="gcc-usecase-card">
+            <span class="gcc-usecase-icon">
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card.png" alt="Urgent hiring icon" loading="lazy" />
+            </span>
+            <h3>Urgent hiring</h3>
+            <p>Get qualified candidates in days, not weeks.</p>
+          </article>
 
-  <article class="gcc-usecase-card">
-    <span class="gcc-usecase-icon">
-      <img
-        src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(1).png"
-        alt="Offshore management challenges icon"
-        loading="lazy"
-      />
-    </span>
-    <h3>Offshore management challenges</h3>
-    <p>Avoid inefficiencies of managing remote teams directly.</p>
-  </article>
+          <article class="gcc-usecase-card">
+            <span class="gcc-usecase-icon">
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(1).png" alt="Explore offshore talent icon" loading="lazy" />
+            </span>
+            <h3>Explore offshore talent</h3>
+            <p>Test and work with Pakistan-based talent before committing long-term.</p>
+          </article>
 
-  <article class="gcc-usecase-card">
-    <span class="gcc-usecase-icon">
-      <img
-        src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(2).png"
-        alt="Accountability for outcomes icon"
-        loading="lazy"
-      />
-    </span>
-    <h3>Accountability for outcomes</h3>
-    <p>We own delivery, not just resource availability.</p>
-  </article>
-</div>
+          <article class="gcc-usecase-card">
+            <span class="gcc-usecase-icon">
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(2).png" alt="Flexible cost model icon" loading="lazy" />
+            </span>
+            <h3>Flexible cost model</h3>
+            <p>Pay only for actual hours worked — no fixed retainers or overhead.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1716,44 +1747,40 @@
           </div>
 
           <p class="gcc-process-description">
-            Exactly what happens after you reach out, step by step with realistic timelines. A Dedicated Account Manager will be assigned to you as a single point of contact, who will help you throughout the process.
+            Exactly what happens after you reach out, step by step with realistic timelines.
           </p>
         </div>
 
         <div class="gcc-process-accordion" id="gccProcessAccordion">
           <article class="gcc-process-card active" data-index="0" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="true">
             <div class="gcc-active-card-content">
-              <h3>Discovery &amp; Scoping</h3>
+              <h3>Discovery Call</h3>
               <div class="gcc-active-card-bottom">
-                <p>A detailed conversation — not a sales pitch. We map out what you need built or managed, who owns what, and what success looks like.</p>
+                <p>A detailed conversation. We ask about the role, your team, and working hours. You ask us anything. No slides, no pitch, no pressure.</p>
                 <ul>
-                  <li>What are the deliverables and success metrics?</li>
-                  <li>What tools, processes, or systems are involved?</li>
-                  <li>What is your timeline, budget, and level of involvement?</li>
+                  <li>What does this person need to do day-to-day?</li>
+                  <li>What tools, stack, or domain knowledge matters?</li>
+                  <li>What is your budget and how urgent is this?</li>
                 </ul>
               </div>
             </div>
             <div class="gcc-collapsed-card-content">
-              <span class="gcc-card-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M11 19a8 8 0 1 1 5.66-2.34L21 21" stroke="currentColor"/><path d="M8.5 11h5M11 8.5v5" stroke="currentColor"/></svg></span>
-              <h4>Discovery &amp; Scoping</h4>
+              <span class="gcc-card-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/loupe.png" alt="" loading="lazy" /></span>
+              <h4>Discovery Call</h4>
             </div>
           </article>
 
           <article class="gcc-process-card" data-index="1" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
             <div class="gcc-active-card-content gcc-simple-active">
-              <h3>Solution Design &amp; Team Blueprint</h3>
+              <h3>We Search Our Pakistan Talent Pool</h3>
               <div class="gcc-active-card-bottom">
-                <p>We come back to you with a proposed team structure, roles, reporting lines, and a delivery framework tailored to your requirements. No generic proposals.</p>
-                <ul>
-                  <li>Recommended team size and role breakdown</li>
-                  <li>Tooling and communication setup</li>
-                  <li>KPIs, SLAs, and reporting cadence defined upfront</li>
-                </ul>
+                <p>Our Pakistan-based sourcing team starts immediately. Internal pre-vetted pool first, the fastest path. Then active outreach across LinkedIn, local job portals, and top university alumni networks.</p>
+                <strong>Pipeline typically built within 48–72 hours of brief confirmation.</strong>
               </div>
             </div>
             <div class="gcc-collapsed-card-content">
-              <span class="gcc-card-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 8h5V3H5v5ZM14 8h5V3h-5v5ZM5 21h5v-5H5v5ZM14 21h5v-5h-5v5ZM10 5h4M10 18h4M7.5 8v8M16.5 8v8" stroke="currentColor"/></svg></span>
-              <h4>Solution Design &amp; Team Blueprint</h4>
+              <span class="gcc-card-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Linked.png" alt="" loading="lazy" /></span>
+              <h4>Talent Search</h4>
             </div>
           </article>
 
@@ -1761,55 +1788,52 @@
             <div class="gcc-active-card-content gcc-simple-active">
               <h3>Three-Stage Vetting — Before You See Anyone</h3>
               <div class="gcc-active-card-bottom">
-                <p>Every resource goes through our rigorous vetting process. You only get people we would confidently deploy ourselves.</p>
+                <p>Every candidate goes through our 2-stage process before you see a single CV. You only get people we would confidently hire ourselves.</p>
                 <ul>
-                  <li>Stage 1 — HR interview: Command on language, communication, remote-work readiness</li>
-                  <li>Stage 2 — Technical or skills test: role-specific, not generic</li>
-                  <li>Stage 3 — Culture and delivery-style fit for your team</li>
+                  <li>Stage 1 — HR interview: command on language, communication, and remote-work readiness.</li>
+                  <li>Stage 2 — Technical or skills test: role-specific, not generic.</li>
                 </ul>
               </div>
             </div>
             <div class="gcc-collapsed-card-content">
-              <span class="gcc-card-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-2.8 8.4-7 10-4.2-1.6-7-5.5-7-10V6l7-3Z" stroke="currentColor"/><path d="m9 12 2 2 4-5" stroke="currentColor"/></svg></span>
-              <h4>Three-Stage Vetting</h4>
+              <span class="gcc-card-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/shield.png" alt="" loading="lazy" /></span>
+              <h4>Screening &amp; Vetting</h4>
             </div>
           </article>
 
           <article class="gcc-process-card" data-index="3" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
             <div class="gcc-active-card-content gcc-simple-active">
-              <h3>You Approve. We Onboard.</h3>
+              <h3>You Interview. You Choose.</h3>
               <div class="gcc-active-card-bottom">
-                <p>You review proposed team members and sign off. We handle all onboarding, documentation, system access, role briefing, and tooling setup. You are ready to go in no time.</p>
+                <p>You receive a pool of pre-vetted profiles, each with a CV and assessment summary. You interview whoever you like. We handle scheduling and feedback loops.</p>
                 <ul>
-                  <li>Final team approval and sign-off</li>
-                  <li>Onboarding, documentation, and system access setup</li>
-                  <li>Role briefing and tooling configuration</li>
+                  <li>Post-interview feedback closed within 24 hours.</li>
+                  <li>If none are right, we re-search at no additional cost.</li>
                 </ul>
               </div>
             </div>
             <div class="gcc-collapsed-card-content">
-              <span class="gcc-card-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l4 4v14H7V3Z" stroke="currentColor"/><path d="M14 3v5h5M9 13h6M9 17h4" stroke="currentColor"/></svg></span>
-              <h4>You Approve. We Onboard.</h4>
+              <span class="gcc-card-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/File.png" alt="" loading="lazy" /></span>
+              <h4>Interview &amp; Select</h4>
             </div>
           </article>
 
           <article class="gcc-process-card" data-index="4" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
             <div class="gcc-active-card-content gcc-simple-active">
-              <h3>Delivery Begins. We Manage. You Scale.</h3>
+              <h3>Contract Signed. Resource Starts.</h3>
               <div class="gcc-active-card-bottom">
-                <p>From Day 1, your managed team operates under our governance framework and pre-agreed RACI. You get the desired level of visibility.</p>
+                <p>We handle employment documentation, payroll setup, and a structured Day 1 briefing.</p>
                 <ul>
-                  <li>Weekly delivery reports and sprint reviews</li>
-                  <li>Performance management handled by us</li>
-                  <li>Pakistan labour law compliant employment contracts for all resources</li>
-                  <li>Labour laws, income tax, and payroll, all handled by us</li>
-                  <li>Monthly invoicing with clear SLA tracking and outcome reporting</li>
+                  <li>Pakistan labour law compliant employment contract.</li>
+                  <li>Labour law requirements and income tax are handled by us.</li>
+                  <li>Weekly timesheets and approval process active from Day 1.</li>
+                  <li>Free-of-cost replacement within 30 days of onboarding.</li>
                 </ul>
               </div>
             </div>
             <div class="gcc-collapsed-card-content">
-              <span class="gcc-card-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 17 9 12l4 4 7-8" stroke="currentColor"/><path d="M15 8h5v5" stroke="currentColor"/></svg></span>
-              <h4>Delivery Begins. We Manage. You Scale.</h4>
+              <span class="gcc-card-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card.png" alt="" loading="lazy" /></span>
+              <h4>Onboarding &amp; Start</h4>
             </div>
           </article>
         </div>
@@ -1822,24 +1846,45 @@
         <div class="gcc-model-head">
           <div>
             <p class="gcc-label">Why This Model Works</p>
-            <h2 class="gcc-section-title">Built for accountability, not<br />just outsourcing</h2>
+            <h2 class="gcc-section-title">Fast, flexible, and built <br />around your needs</h2>
           </div>
 
           <p>
-            Unlike traditional outsourcing models, we stay accountable from kickoff to final delivery — with structured management, clear reporting, and teams built to scale with you.
+            A lightweight hiring model that gives you speed, control, and access to high-quality talent — without long-term commitment.
           </p>
         </div>
 
         <div class="gcc-model-grid">
-          <article class="gcc-model-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png" alt="" loading="lazy" /></span><h3>Single Point of Contact</h3><span class="gcc-card-line"></span><p>Our Lead ensures clear communication and consistent delivery — no confusion.</p></article>
-          <article class="gcc-model-card"><span class="gcc-model-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor"/><path d="M9 9l6 3-3 2-1 4-2-9Z" stroke="currentColor"/></svg></span><h3>Outcome-Driven Delivery</h3><span class="gcc-card-line"></span><p>We drive results with clear deliverables, KPIs, SLAs, and accountability from day one.</p></article>
-          <article class="gcc-model-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Signal-Full%20Streamline%20Sharp.png" alt="" loading="lazy" /></span><h3>Transparent Operations</h3><span class="gcc-card-line"></span><p>We provide complete visibility through weekly updates, MBRs and QBRs.</p></article>
-          <article class="gcc-model-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Trending-Up%20Streamline%20Outlined-Streamline-Material-Free.png" alt="" loading="lazy" /></span><h3>Built to Scale</h3><span class="gcc-card-line"></span><p>Easily expand or restructure your team as your business grows and needs evolve.</p></article>
+          <article class="gcc-model-card">
+            <span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/File.png" alt="" loading="lazy" /></span>
+            <h3>Pay for what you use</h3>
+            <span class="gcc-card-line"></span>
+            <p>No fixed costs — you’re billed only for actual hours or project scope.</p>
+          </article>
+
+          <article class="gcc-model-card">
+            <span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(3).png" alt="" loading="lazy" /></span>
+            <h3>Fast hiring process</h3>
+            <span class="gcc-card-line"></span>
+            <p>Get qualified, pre-vetted candidates within days, not weeks.</p>
+          </article>
+
+          <article class="gcc-model-card">
+            <span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png" alt="" loading="lazy" /></span>
+            <h3>Full control</h3>
+            <span class="gcc-card-line"></span>
+            <p>You manage the resource directly, just like your in-house team.</p>
+          </article>
+
+          <article class="gcc-model-card">
+            <span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(2).png" alt="" loading="lazy" /></span>
+            <h3>Easy replacement</h3>
+            <span class="gcc-card-line"></span>
+            <p>Not the right fit? We replace at no additional cost.</p>
+          </article>
         </div>
       </div>
     </section>
-
-
   </div>
 
   <script>
