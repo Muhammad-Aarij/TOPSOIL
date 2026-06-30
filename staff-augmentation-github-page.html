@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -407,8 +408,8 @@
     }
 
     .gcc-usecase-icon svg {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
       display: block;
       stroke-width: 1.8;
     }
@@ -518,12 +519,10 @@
     .gcc-process-card.active {
       flex: 4;
       background-image:
-        linear-gradient(
-          180deg,
+        linear-gradient(180deg,
           rgba(7, 18, 37, 0.45) 0%,
           rgba(7, 18, 37, 0.72) 48%,
-          rgba(7, 18, 37, 0.98) 100%
-        ),
+          rgba(7, 18, 37, 0.98) 100%),
         var(--bg);
       background-size: cover;
       background-position: center;
@@ -770,8 +769,8 @@
       letter-spacing: -0.35px;
     }
 
-    .gcc-pakistan-head > p,
-    .gcc-model-head > p {
+    .gcc-pakistan-head>p,
+    .gcc-model-head>p {
       margin: 8px 0 0;
       color: #566173;
       font-size: 20px;
@@ -800,8 +799,15 @@
       z-index: 0;
     }
 
-    .gcc-stats-grid::before { width: 710px; height: 710px; }
-    .gcc-stats-grid::after { width: 610px; height: 610px; }
+    .gcc-stats-grid::before {
+      width: 710px;
+      height: 710px;
+    }
+
+    .gcc-stats-grid::after {
+      width: 610px;
+      height: 610px;
+    }
 
     .gcc-stat-card {
       position: absolute;
@@ -816,12 +822,37 @@
       text-align: center;
     }
 
-    .gcc-stat-card:nth-child(1) { left: 0; top: 138px; }
-    .gcc-stat-card:nth-child(2) { left: 50%; top: 68px; transform: translateX(-50%); }
-    .gcc-stat-card:nth-child(3) { right: 0; top: 138px; }
-    .gcc-stat-card:nth-child(4) { left: 0; top: 420px; }
-    .gcc-stat-card:nth-child(5) { left: 50%; top: 350px; transform: translateX(-50%); }
-    .gcc-stat-card:nth-child(6) { right: 0; top: 420px; }
+    .gcc-stat-card:nth-child(1) {
+      left: 0;
+      top: 138px;
+    }
+
+    .gcc-stat-card:nth-child(2) {
+      left: 50%;
+      top: 68px;
+      transform: translateX(-50%);
+    }
+
+    .gcc-stat-card:nth-child(3) {
+      right: 0;
+      top: 138px;
+    }
+
+    .gcc-stat-card:nth-child(4) {
+      left: 0;
+      top: 420px;
+    }
+
+    .gcc-stat-card:nth-child(5) {
+      left: 50%;
+      top: 350px;
+      transform: translateX(-50%);
+    }
+
+    .gcc-stat-card:nth-child(6) {
+      right: 0;
+      top: 420px;
+    }
 
     .gcc-stat-card strong {
       display: block;
@@ -1049,6 +1080,7 @@
     /* ================= RESPONSIVE ================= */
 
     @media (max-width: 1120px) {
+
       .gcc-managed-grid,
       .gcc-hero-inner,
       .gcc-pakistan-head,
@@ -1067,7 +1099,8 @@
         text-align: center;
         align-items: center;
       }
-      .gcc-hero-tags{
+
+      .gcc-hero-tags {
         justify-content: center;
       }
 
@@ -1089,8 +1122,8 @@
       }
 
       .gcc-process-description,
-      .gcc-pakistan-head > p,
-      .gcc-model-head > p {
+      .gcc-pakistan-head>p,
+      .gcc-model-head>p {
         margin-top: 0;
         max-width: 100%;
       }
@@ -1334,12 +1367,13 @@
         font-size: 24px;
       }
     }
-  
+
 
     /* ================= EXTRA TABLET / MOBILE TEXT SYNC ================= */
     /* Desktop/web typography above remains unchanged. These overrides only run on tablet and mobile. */
 
     @media (max-width: 991px) {
+
       .gcc-section-title,
       .gcc-pakistan-head h2,
       .gcc-model-head h2,
@@ -1350,8 +1384,8 @@
       }
 
       .gcc-section-copy,
-      .gcc-pakistan-head > p,
-      .gcc-model-head > p,
+      .gcc-pakistan-head>p,
+      .gcc-model-head>p,
       .gcc-process-description {
         font-size: 16px;
         line-height: 1.5;
@@ -1444,8 +1478,8 @@
       }
 
       .gcc-section-copy,
-      .gcc-pakistan-head > p,
-      .gcc-model-head > p,
+      .gcc-pakistan-head>p,
+      .gcc-model-head>p,
       .gcc-process-description {
         font-size: 15px;
         line-height: 1.48;
@@ -1570,7 +1604,7 @@
       letter-spacing: -0.18px;
     }
 
-    .gcc-active-card-bottom ul + strong {
+    .gcc-active-card-bottom ul+strong {
       margin-top: 18px;
     }
 
@@ -1586,6 +1620,7 @@
       .gcc-process-card {
         min-height: 108px;
       }
+
       .gcc-process-card.active {
         min-height: 580px;
       }
@@ -1595,15 +1630,18 @@
       .gcc-hero-service-img {
         width: min(100%, 280px);
       }
+
       .gcc-active-card-bottom strong {
         font-size: 14px;
       }
+
       .gcc-process-card.active {
         min-height: 680px;
       }
     }
-</style>
+  </style>
 </head>
+
 <body>
   <div class="gcc-page">
 
@@ -1616,7 +1654,8 @@
           <h1>Staff Augmentation</h1>
 
           <p class="gcc-hero-copy">
-            Access pre-vetted talent on demand — hire by the hour, day, or project duration, and scale your team without long-term commitments.
+            Access pre-vetted talent on demand — hire by the hour, day, or project duration, and scale your team without
+            long-term commitments.
           </p>
 
           <div class="gcc-hero-tags">
@@ -1631,12 +1670,9 @@
         </div>
 
         <div class="gcc-hero-visual" aria-hidden="true">
-         <img
-  class="gcc-hero-service-img"
-  src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Group%20176568.png"
-  alt="Staff augmentation illustration"
-  loading="lazy"
-/>
+          <img class="gcc-hero-service-img"
+            src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Group%20176568.png"
+            alt="Staff augmentation illustration" loading="lazy" />
         </div>
       </div>
     </section>
@@ -1647,9 +1683,7 @@
         <div class="gcc-managed-image">
           <img
             src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/b27b4461d6e094e6a96fc87679108d56c7a7fe6f.jpg"
-            alt="Team meeting in office"
-            loading="lazy"
-          />
+            alt="Team meeting in office" loading="lazy" />
         </div>
 
         <div class="gcc-managed-copy">
@@ -1662,7 +1696,8 @@
           <div class="gcc-managed-spacer"></div>
 
           <p class="gcc-section-copy">
-            Hire pre-vetted professionals for short-term projects, urgent needs, or specialized roles without the overhead of full-time hiring. You stay in control while we handle sourcing, vetting, and onboarding.
+            Hire pre-vetted professionals for short-term projects, urgent needs, or specialized roles without the
+            overhead of full-time hiring. You stay in control while we handle sourcing, vetting, and onboarding.
           </p>
 
           <strong>Pre-vetted talent • Rapid Scaling • Flexible engagement.</strong>
@@ -1681,14 +1716,16 @@
           </h2>
 
           <p class="gcc-section-copy">
-            Staff augmentation is ideal when you need the right talent quickly without long hiring cycles or long-term commitments.
+            Staff augmentation is ideal when you need the right talent quickly without long hiring cycles or long-term
+            commitments.
           </p>
         </div>
 
         <div class="gcc-usecases-grid">
           <article class="gcc-usecase-card">
             <span class="gcc-usecase-icon">
-              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon.png" alt="Short-term projects icon" loading="lazy" />
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon.png"
+                alt="Short-term projects icon" loading="lazy" />
             </span>
             <h3>Short-term projects</h3>
             <p>Support sprints, launches, campaigns, or migrations with the right talent.</p>
@@ -1696,7 +1733,8 @@
 
           <article class="gcc-usecase-card">
             <span class="gcc-usecase-icon">
-              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(1).png" alt="Temporary gaps icon" loading="lazy" />
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(1).png"
+                alt="Temporary gaps icon" loading="lazy" />
             </span>
             <h3>Temporary gaps</h3>
             <p>Cover leaves, or sudden workload spikes without slowing down your team.</p>
@@ -1704,7 +1742,8 @@
 
           <article class="gcc-usecase-card">
             <span class="gcc-usecase-icon">
-              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(2).png" alt="Temporary gaps icon" loading="lazy" />
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(2).png"
+                alt="Temporary gaps icon" loading="lazy" />
             </span>
             <h3>Missing expertise</h3>
             <p>Bring in specialized skills your team doesn’t have on demand.</p>
@@ -1712,7 +1751,8 @@
 
           <article class="gcc-usecase-card">
             <span class="gcc-usecase-icon">
-              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card.png" alt="Urgent hiring icon" loading="lazy" />
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon5.png"
+                alt="Urgent hiring icon" loading="lazy" />
             </span>
             <h3>Urgent hiring</h3>
             <p>Get qualified candidates in days, not weeks.</p>
@@ -1720,7 +1760,8 @@
 
           <article class="gcc-usecase-card">
             <span class="gcc-usecase-icon">
-              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(3).png" alt="Temporary gaps icon" loading="lazy" />
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(3).png"
+                alt="Temporary gaps icon" loading="lazy" />
             </span>
             <h3>Explore offshore talent</h3>
             <p>Test and work with Pakistan-based talent before committing long-term.</p>
@@ -1728,7 +1769,8 @@
 
           <article class="gcc-usecase-card">
             <span class="gcc-usecase-icon">
-              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(4).png" alt="Temporary gaps icon" loading="lazy" />
+              <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(4).png"
+                alt="Temporary gaps icon" loading="lazy" />
             </span>
             <h3>Flexible cost model</h3>
             <p>Pay only for actual hours worked — no fixed retainers or overhead.</p>
@@ -1752,91 +1794,196 @@
         </div>
 
         <div class="gcc-process-accordion" id="gccProcessAccordion">
-          <article class="gcc-process-card active" data-index="0" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="true">
-            <div class="gcc-active-card-content">
-              <h3>Discovery Call</h3>
-              <div class="gcc-active-card-bottom">
-                <p>A detailed conversation. We ask about the role, your team, and working hours. You ask us anything. No slides, no pitch, no pressure.</p>
-                <ul>
-                  <li>What does this person need to do day-to-day?</li>
-                  <li>What tools, stack, or domain knowledge matters?</li>
-                  <li>What is your budget and how urgent is this?</li>
-                </ul>
-              </div>
-            </div>
-            <div class="gcc-collapsed-card-content">
-              <span class="gcc-card-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/loupe.png" alt="" loading="lazy" /></span>
-              <h4>Discovery Call</h4>
-            </div>
-          </article>
+  <!-- 01 -->
+  <article
+    class="gcc-process-card active"
+    data-index="0"
+    style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')"
+    role="button"
+    tabindex="0"
+    aria-expanded="true"
+  >
+    <div class="gcc-active-card-content">
+      <h3>Discovery Call</h3>
 
-          <article class="gcc-process-card" data-index="1" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
-            <div class="gcc-active-card-content gcc-simple-active">
-              <h3>We Search Our Pakistan Talent Pool</h3>
-              <div class="gcc-active-card-bottom">
-                <p>Our Pakistan-based sourcing team starts immediately. Internal pre-vetted pool first, the fastest path. Then active outreach across LinkedIn, local job portals, and top university alumni networks.</p>
-                <strong>Pipeline typically built within 48–72 hours of brief confirmation.</strong>
-              </div>
-            </div>
-            <div class="gcc-collapsed-card-content">
-              <span class="gcc-card-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Linked.png" alt="" loading="lazy" /></span>
-              <h4>Talent Search</h4>
-            </div>
-          </article>
+      <div class="gcc-active-card-bottom">
+        <p>
+          A detailed conversation. We ask about the role, your team, and working hours.
+          You ask us anything. No slides, no pitch, no pressure.
+        </p>
 
-          <article class="gcc-process-card" data-index="2" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
-            <div class="gcc-active-card-content gcc-simple-active">
-              <h3>Three-Stage Vetting — Before You See Anyone</h3>
-              <div class="gcc-active-card-bottom">
-                <p>Every candidate goes through our 2-stage process before you see a single CV. You only get people we would confidently hire ourselves.</p>
-                <ul>
-                  <li>Stage 1 — HR interview: command on language, communication, and remote-work readiness.</li>
-                  <li>Stage 2 — Technical or skills test: role-specific, not generic.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="gcc-collapsed-card-content">
-              <span class="gcc-card-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/shield.png" alt="" loading="lazy" /></span>
-              <h4>Screening &amp; Vetting</h4>
-            </div>
-          </article>
+        <ul>
+          <li>What does this person need to do day-to-day?</li>
+          <li>What tools, stack, or domain knowledge matters?</li>
+          <li>What is your budget and how urgent is this?</li>
+        </ul>
+      </div>
+    </div>
 
-          <article class="gcc-process-card" data-index="3" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
-            <div class="gcc-active-card-content gcc-simple-active">
-              <h3>You Interview. You Choose.</h3>
-              <div class="gcc-active-card-bottom">
-                <p>You receive a pool of pre-vetted profiles, each with a CV and assessment summary. You interview whoever you like. We handle scheduling and feedback loops.</p>
-                <ul>
-                  <li>Post-interview feedback closed within 24 hours.</li>
-                  <li>If none are right, we re-search at no additional cost.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="gcc-collapsed-card-content">
-              <span class="gcc-card-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/File.png" alt="" loading="lazy" /></span>
-              <h4>Interview &amp; Select</h4>
-            </div>
-          </article>
+    <div class="gcc-collapsed-card-content">
+      <span class="gcc-card-icon">
+        <img
+          src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/loupe.png"
+          alt="Discovery Call icon"
+          loading="lazy"
+        />
+      </span>
 
-          <article class="gcc-process-card" data-index="4" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
-            <div class="gcc-active-card-content gcc-simple-active">
-              <h3>Contract Signed. Resource Starts.</h3>
-              <div class="gcc-active-card-bottom">
-                <p>We handle employment documentation, payroll setup, and a structured Day 1 briefing.</p>
-                <ul>
-                  <li>Pakistan labour law compliant employment contract.</li>
-                  <li>Labour law requirements and income tax are handled by us.</li>
-                  <li>Weekly timesheets and approval process active from Day 1.</li>
-                  <li>Free-of-cost replacement within 30 days of onboarding.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="gcc-collapsed-card-content">
-              <span class="gcc-card-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card.png" alt="" loading="lazy" /></span>
-              <h4>Onboarding &amp; Start</h4>
-            </div>
-          </article>
-        </div>
+      <h4>Discovery Call</h4>
+    </div>
+  </article>
+
+  <!-- 02 -->
+  <article
+    class="gcc-process-card"
+    data-index="1"
+    style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')"
+    role="button"
+    tabindex="0"
+    aria-expanded="false"
+  >
+    <div class="gcc-active-card-content gcc-simple-active">
+      <h3>We Search Our Pakistan Talent Pool</h3>
+
+      <div class="gcc-active-card-bottom">
+        <p>
+          Our Pakistan-based sourcing team starts immediately. Internal pre-vetted pool
+          first, the fastest path. Then active outreach across LinkedIn, local job portals,
+          and top university alumni networks.
+        </p>
+
+        <strong>Pipeline typically built within 48–72 hours of brief confirmation.</strong>
+      </div>
+    </div>
+
+    <div class="gcc-collapsed-card-content">
+      <span class="gcc-card-icon">
+        <img
+          src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Job-Seach-Man%20Streamline%20Freehand.png"
+          alt="Talent Search icon"
+          loading="lazy"
+        />
+      </span>
+
+      <h4>Talent Search</h4>
+    </div>
+  </article>
+
+  <!-- 03 -->
+  <article
+    class="gcc-process-card"
+    data-index="2"
+    style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')"
+    role="button"
+    tabindex="0"
+    aria-expanded="false"
+  >
+    <div class="gcc-active-card-content gcc-simple-active">
+      <h3>Three-Stage Vetting — Before You See Anyone</h3>
+
+      <div class="gcc-active-card-bottom">
+        <p>
+          Every candidate goes through our 2-stage process before you see a single CV.
+          You only get people we would confidently hire ourselves.
+        </p>
+
+        <ul>
+          <li>Stage 1 — HR interview: command on language, communication, and remote-work readiness.</li>
+          <li>Stage 2 — Technical or skills test: role-specific, not generic.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gcc-collapsed-card-content">
+      <span class="gcc-card-icon">
+        <img
+          src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Job-Choose-Candidate%20Streamline%20Freehand.png"
+          alt="Screening and Vetting icon"
+          loading="lazy"
+        />
+      </span>
+
+      <h4>Screening &amp; Vetting</h4>
+    </div>
+  </article>
+
+  <!-- 04 -->
+  <article
+    class="gcc-process-card"
+    data-index="3"
+    style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')"
+    role="button"
+    tabindex="0"
+    aria-expanded="false"
+  >
+    <div class="gcc-active-card-content gcc-simple-active">
+      <h3>You Interview. You Choose.</h3>
+
+      <div class="gcc-active-card-bottom">
+        <p>
+          You receive a pool of pre-vetted profiles, each with a CV and assessment summary.
+          You interview whoever you like. We handle scheduling and feedback loops.
+        </p>
+
+        <ul>
+          <li>Post-interview feedback closed within 24 hours.</li>
+          <li>If none are right, we re-search at no additional cost.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gcc-collapsed-card-content">
+      <span class="gcc-card-icon">
+        <img
+          src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Job-Briefcase-Document%20Streamline%20Freehand.png"
+          alt="Interview and Select icon"
+          loading="lazy"
+        />
+      </span>
+
+      <h4>Interview &amp; Select</h4>
+    </div>
+  </article>
+
+  <!-- 05 -->
+  <article
+    class="gcc-process-card"
+    data-index="4"
+    style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')"
+    role="button"
+    tabindex="0"
+    aria-expanded="false"
+  >
+    <div class="gcc-active-card-content gcc-simple-active">
+      <h3>Contract Signed. Resource Starts.</h3>
+
+      <div class="gcc-active-card-bottom">
+        <p>
+          We handle employment documentation, payroll setup, and a structured Day 1 briefing.
+        </p>
+
+        <ul>
+          <li>Pakistan labour law compliant employment contract.</li>
+          <li>Labour law requirements and income tax are handled by us.</li>
+          <li>Weekly timesheets and approval process active from Day 1.</li>
+          <li>Free-of-cost replacement within 30 days of onboarding.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gcc-collapsed-card-content">
+      <span class="gcc-card-icon">
+        <img
+          src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Office-Worker%20Streamline%20Plump.png"
+          alt="Onboarding and Start icon"
+          loading="lazy"
+        />
+      </span>
+
+      <h4>Onboarding &amp; Start</h4>
+    </div>
+  </article>
+</div>
       </div>
     </section>
 
@@ -1850,34 +1997,43 @@
           </div>
 
           <p>
-            A lightweight hiring model that gives you speed, control, and access to high-quality talent — without long-term commitment.
+            A lightweight hiring model that gives you speed, control, and access to high-quality talent — without
+            long-term commitment.
           </p>
         </div>
 
         <div class="gcc-model-grid">
           <article class="gcc-model-card">
-            <span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/File.png" alt="" loading="lazy" /></span>
+            <span class="gcc-model-icon"><img
+                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/File.png" alt=""
+                loading="lazy" /></span>
             <h3>Pay for what you use</h3>
             <span class="gcc-card-line"></span>
             <p>No fixed costs — you’re billed only for actual hours or project scope.</p>
           </article>
 
           <article class="gcc-model-card">
-            <span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(3).png" alt="" loading="lazy" /></span>
+            <span class="gcc-model-icon"><img
+                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(3).png" alt=""
+                loading="lazy" /></span>
             <h3>Fast hiring process</h3>
             <span class="gcc-card-line"></span>
             <p>Get qualified, pre-vetted candidates within days, not weeks.</p>
           </article>
 
           <article class="gcc-model-card">
-            <span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png" alt="" loading="lazy" /></span>
+            <span class="gcc-model-icon"><img
+                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png"
+                alt="" loading="lazy" /></span>
             <h3>Full control</h3>
             <span class="gcc-card-line"></span>
             <p>You manage the resource directly, just like your in-house team.</p>
           </article>
 
           <article class="gcc-model-card">
-            <span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(2).png" alt="" loading="lazy" /></span>
+            <span class="gcc-model-icon"><img
+                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(2).png" alt=""
+                loading="lazy" /></span>
             <h3>Easy replacement</h3>
             <span class="gcc-card-line"></span>
             <p>Not the right fit? We replace at no additional cost.</p>
@@ -1926,4 +2082,5 @@
     });
   </script>
 </body>
+
 </html>
