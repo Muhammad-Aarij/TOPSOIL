@@ -1,0 +1,508 @@
+<section class="talent-grid-section">
+  <div class="talent-grid-bg" id="talentGrid"></div>
+
+  <div class="talent-content">
+    <p><strong>What</strong> We Look For</p>
+
+    <h2>
+      Great Talent Doesn’t<br />
+      Always Fit Job Descriptions
+    </h2>
+
+    <span>
+      We’re always open to connecting with individuals who<br />
+      want to build, learn, and make an impact.
+    </span>
+
+    <a href="#drop-cv">Drop Your CV Here</a>
+  </div>
+</section>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #000d25;
+    font-family: "Inter", sans-serif;
+  }
+
+  .talent-grid-section {
+    --grid-cols: 17;
+    --grid-rows: 7;
+
+    position: relative;
+    min-height: 720px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #061936 0%, #052033 100%);
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+  }
+
+  .talent-grid-bg {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    opacity: 0.96;
+    filter: blur(1.2px);
+  }
+
+  .talent-cell {
+    position: relative;
+    border-right: 3px solid rgba(255, 255, 255, 0.055);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.055);
+    background: rgba(7, 28, 57, 0.34);
+    overflow: hidden;
+  }
+
+  .talent-cell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 55%),
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.025), transparent 62%);
+    opacity: 0.65;
+    pointer-events: none;
+  }
+
+  .talent-cell.has-profile {
+    background: rgba(8, 26, 55, 0.52);
+  }
+
+  .talent-cell img {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.08) saturate(0.85) contrast(1.02);
+    opacity: 0;
+    transform: scale(1.06);
+    transition:
+      opacity 2200ms ease-in-out,
+      transform 2600ms ease-in-out,
+      filter 2200ms ease-in-out;
+  }
+
+  .talent-cell img.is-visible {
+    opacity: 0.72;
+    transform: scale(1);
+  }
+
+  .talent-cell.is-fading img.is-visible {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  .talent-cell.has-profile::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background:
+      linear-gradient(180deg, rgba(0, 13, 37, 0.08), rgba(0, 13, 37, 0.28)),
+      radial-gradient(circle at 50% 30%, transparent 0%, rgba(0, 13, 37, 0.16) 72%);
+    pointer-events: none;
+  }
+
+  .talent-cell.has-profile:hover img.is-visible {
+    opacity: 0.9;
+    filter: grayscale(0) saturate(1) contrast(1.04);
+  }
+
+  .talent-content {
+    position: relative;
+    z-index: 5;
+    min-height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .talent-content p {
+    margin: 0 0 20px;
+    color: #4ecb89;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+  }
+
+  .talent-content p strong {
+    font-weight: 700;
+  }
+
+  .talent-content h2 {
+    margin: 0;
+    max-width: 980px;
+    color: #ffffff;
+    font-size: clamp(42px, 5.6vw, 60px);
+    line-height: 120%;
+    font-weight: 500;
+    letter-spacing: -3.8px;
+  }
+
+  .talent-content span {
+    margin-top: 24px;
+    display: block;
+    color: rgba(255, 255, 255, 0.94);
+    font-size: 20px;
+    line-height: 150%;
+    font-weight: 400;
+    letter-spacing: -0.7px;
+  }
+
+  .talent-content a {
+    pointer-events: auto;
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 15px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #51c788, #247653);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    box-shadow:
+      0 14px 34px rgba(72, 196, 134, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.28);
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      background 220ms ease;
+  }
+
+  .talent-content a:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(180deg, #55d393, #249063);
+    box-shadow:
+      0 18px 40px rgba(72, 196, 134, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.32);
+  }
+
+  @media (max-width: 991px) {
+    .talent-grid-section {
+      --grid-cols: 10;
+      --grid-rows: 8;
+      min-height: 680px;
+    }
+
+    .talent-content {
+      min-height: 680px;
+    }
+
+    .talent-content h2 {
+      letter-spacing: -2.4px;
+    }
+
+    .talent-content span {
+      font-size: 19px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .talent-grid-section {
+      --grid-cols: 7;
+      --grid-rows: 9;
+      min-height: 620px;
+    }
+
+    .talent-content {
+      min-height: 620px;
+      padding: 90px 18px;
+    }
+
+    .talent-content p {
+      font-size: 16px;
+    }
+
+    .talent-content h2 {
+      font-size: 38px;
+      letter-spacing: -1.7px;
+    }
+
+    .talent-content span {
+      margin-top: 24px;
+      font-size: 16px;
+    }
+
+    .talent-content a {
+      margin-top: 30px;
+      min-height: 48px;
+      font-size: 16px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".talent-grid-section");
+    const grid = document.getElementById("talentGrid");
+
+    const imagePool = [
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1528892952291-009c663ce843?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=500&q=80"
+    ];
+
+    const maxVisibleImages = 8;
+    const cells = [];
+    const activeTiles = new Map();
+    const imageLastCell = new Map();
+
+    let intervalId = null;
+    let resizeTimer = null;
+    let currentCols = 0;
+    let currentRows = 0;
+
+    function getGridSettings() {
+      const styles = getComputedStyle(section);
+
+      const cols =
+        Number(styles.getPropertyValue("--grid-cols").trim()) || 17;
+
+      const rows =
+        Number(styles.getPropertyValue("--grid-rows").trim()) || 7;
+
+      return { cols, rows, total: cols * rows };
+    }
+
+    function randomBetween(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function pickRandomFromArray(items) {
+      return items[Math.floor(Math.random() * items.length)];
+    }
+
+    function getActiveCellIndexes() {
+      return Array.from(activeTiles.keys());
+    }
+
+    function getActiveImageIndexes() {
+      return Array.from(activeTiles.values()).map(function (tile) {
+        return tile.imageIndex;
+      });
+    }
+
+    function getAvailableImageIndex() {
+      const activeImages = new Set(getActiveImageIndexes());
+
+      const availableImages = imagePool
+        .map(function (_, index) {
+          return index;
+        })
+        .filter(function (index) {
+          return !activeImages.has(index);
+        });
+
+      if (availableImages.length === 0) {
+        return Math.floor(Math.random() * imagePool.length);
+      }
+
+      return pickRandomFromArray(availableImages);
+    }
+
+    function getAvailableCellIndex(imageIndex) {
+      const activeCells = new Set(getActiveCellIndexes());
+      const lastCellForImage = imageLastCell.get(imageIndex);
+
+      const availableCells = cells
+        .map(function (_, index) {
+          return index;
+        })
+        .filter(function (index) {
+          return !activeCells.has(index) && index !== lastCellForImage;
+        });
+
+      if (availableCells.length === 0) {
+        return null;
+      }
+
+      return pickRandomFromArray(availableCells);
+    }
+
+    function clearTile(cellIndex) {
+      const cell = cells[cellIndex];
+      if (!cell) return;
+
+      cell.innerHTML = "";
+      cell.classList.remove("has-profile", "is-fading");
+      activeTiles.delete(cellIndex);
+    }
+
+    function showImageInCell(cellIndex, imageIndex) {
+      const cell = cells[cellIndex];
+      if (!cell) return;
+
+      cell.classList.add("has-profile");
+
+      const img = document.createElement("img");
+      img.src = imagePool[imageIndex];
+      img.alt = "";
+      img.loading = "lazy";
+
+      cell.appendChild(img);
+
+      requestAnimationFrame(function () {
+        img.classList.add("is-visible");
+      });
+
+      activeTiles.set(cellIndex, {
+        imageIndex,
+        img,
+      });
+
+      imageLastCell.set(imageIndex, cellIndex);
+    }
+
+    function hideImageFromCell(cellIndex, callback) {
+      const cell = cells[cellIndex];
+      const tile = activeTiles.get(cellIndex);
+
+      if (!cell || !tile) {
+        if (callback) callback();
+        return;
+      }
+
+      cell.classList.add("is-fading");
+      tile.img.classList.remove("is-visible");
+
+      window.setTimeout(function () {
+        clearTile(cellIndex);
+
+        if (callback) callback();
+      }, 2200);
+    }
+
+    function addRandomTile() {
+      const imageIndex = getAvailableImageIndex();
+      const cellIndex = getAvailableCellIndex(imageIndex);
+
+      if (cellIndex === null) return;
+
+      showImageInCell(cellIndex, imageIndex);
+    }
+
+    function replaceRandomTile() {
+      const activeCells = getActiveCellIndexes();
+
+      if (activeCells.length < maxVisibleImages) {
+        addRandomTile();
+        return;
+      }
+
+      const oldCellIndex = pickRandomFromArray(activeCells);
+
+      hideImageFromCell(oldCellIndex, function () {
+        window.setTimeout(function () {
+          addRandomTile();
+        }, randomBetween(500, 1100));
+      });
+    }
+
+    function seedInitialTiles() {
+      let count = 0;
+
+      function addNext() {
+        if (count >= maxVisibleImages) return;
+
+        addRandomTile();
+        count += 1;
+
+        window.setTimeout(addNext, randomBetween(700, 1400));
+      }
+
+      addNext();
+    }
+
+    function stopSlider() {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+    }
+
+    function startSlider() {
+      stopSlider();
+
+      intervalId = window.setInterval(function () {
+        replaceRandomTile();
+      }, 4800);
+    }
+
+    function buildGrid(forceRebuild) {
+      const settings = getGridSettings();
+
+      if (
+        !forceRebuild &&
+        settings.cols === currentCols &&
+        settings.rows === currentRows
+      ) {
+        return;
+      }
+
+      stopSlider();
+
+      currentCols = settings.cols;
+      currentRows = settings.rows;
+
+      grid.innerHTML = "";
+      cells.length = 0;
+      activeTiles.clear();
+
+      for (let i = 0; i < settings.total; i += 1) {
+        const cell = document.createElement("div");
+        cell.className = "talent-cell";
+        grid.appendChild(cell);
+        cells.push(cell);
+      }
+
+      seedInitialTiles();
+      startSlider();
+    }
+
+    buildGrid(true);
+
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+
+      resizeTimer = window.setTimeout(function () {
+        buildGrid(false);
+      }, 220);
+    });
+  });
+</script>

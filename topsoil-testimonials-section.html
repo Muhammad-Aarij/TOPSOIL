@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Testimonials Section</title>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000d25;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.testimonials-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 8%, rgba(24, 58, 120, 0.16), transparent 34%),
+    linear-gradient(180deg, #0d1b37 0%, #0d1b37 48%, #010F27 100%);
+  padding: 96px 0 90px;
+}
+
+.testimonials-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.testimonials-head {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.testimonials-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 7px 8px;
+  border-radius: 10px;
+  background:#0B1C39;
+  color: #5abe86;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.testimonials-pill-icon {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  color: #061833;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.testimonials-head h2 {
+  margin: 18px 0 0;
+  color: #fff;
+  font-size: clamp(34px, 4.2vw, 48px);
+  line-height: 1.18;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.testimonials-head p {
+  margin: 24px auto 0;
+  max-width: 650px;
+  color:#ececec;
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 200;
+  letter-spacing: -0.3px;
+}
+
+.testimonials-slider {
+  --testimonial-width: 570px;
+  --testimonial-height: 360px;
+  --testimonial-gap: 30px;
+
+  position: relative;
+  width: 100%;
+  margin-top: 86px;
+}
+
+.testimonials-viewport {
+  position: relative;
+  width: 100%;
+  height: var(--testimonial-height);
+  overflow: hidden;
+}
+
+.testimonials-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: var(--testimonial-width);
+  height: var(--testimonial-height);
+  padding: 30px 42px;
+  overflow: hidden;
+  border-radius: 22px;
+  isolation: isolate;
+  
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+  transition:
+    transform 430ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 430ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 300ms ease;
+  will-change: transform, opacity;
+}
+
+/* Border gradient strongest at top-right and bottom-left */
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 2px;
+  border-radius: inherit;
+  background:
+    /* strongest corner: top-right */
+    radial-gradient(
+      circle at top right,
+      rgba(90, 190, 134, 0.95) 0%,
+      rgba(90, 190, 134, 0.72) 14%,
+      rgba(90, 190, 134, 0.28) 30%,
+      rgba(90, 190, 134, 0.06) 48%,
+      transparent 62%
+    ),
+
+    /* strongest corner: bottom-left */
+    radial-gradient(
+      circle at bottom left,
+      rgba(90, 190, 134, 0.95) 0%,
+      rgba(90, 190, 134, 0.72) 14%,
+      rgba(90, 190, 134, 0.28) 30%,
+      rgba(90, 190, 134, 0.06) 48%,
+      transparent 62%
+    ),
+
+    /* reduced corner: top-left */
+    radial-gradient(
+      circle at top left,
+      rgba(90, 190, 134, 0.12) 0%,
+      rgba(90, 190, 134, 0.06) 18%,
+      rgba(90, 190, 134, 0.02) 34%,
+      transparent 52%
+    ),
+
+    /* reduced corner: bottom-right */
+    radial-gradient(
+      circle at bottom right,
+      rgba(90, 190, 134, 0.06) 0%,
+      rgba(90, 190, 134, 0.06) 18%,
+      rgba(90, 190, 134, 0.01) 34%,
+      transparent 52%
+    ),
+
+    linear-gradient(
+      135deg,
+      rgba(90, 190, 134, 0.12) 0%,
+      rgba(255, 255, 255, 0.02) 38%,
+      rgba(255, 255, 255, 0.015) 62%,
+      rgba(90, 190, 134, 0.1) 100%
+    );
+
+  opacity: 0;
+  pointer-events: none;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  z-index: -1;
+  border-radius: 20px;
+  background: linear-gradient(140deg, #36528775 0%, #33508433 70%);
+  pointer-events: none;
+}
+
+.testimonial-card.is-active {
+  z-index: 5;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  filter: none;
+}
+
+.testimonial-card.is-active::before {
+  opacity: 1;
+}
+
+.testimonial-card.is-prev {
+  z-index: 3;
+  opacity: 0.36;
+  transform: translateX(calc(-50% - var(--testimonial-width) - var(--testimonial-gap))) scale(0.96);
+  filter: saturate(0.8);
+}
+
+.testimonial-card.is-prev::before {
+  opacity: 0.18;
+}
+
+.testimonial-card.is-next {
+  z-index: 3;
+  opacity: 0.36;
+  transform: translateX(calc(-50% + var(--testimonial-width) + var(--testimonial-gap))) scale(0.96);
+  filter: saturate(0.8);
+}
+
+.testimonial-card.is-next::before {
+  opacity: 0.18;
+}
+
+.testimonial-card.is-hidden-left,
+.testimonial-card.is-hidden-right {
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.testimonial-card.is-hidden-left {
+  transform: translateX(calc(-50% - (var(--testimonial-width) * 2) - (var(--testimonial-gap) * 2))) scale(0.9);
+}
+
+.testimonial-card.is-hidden-right {
+  transform: translateX(calc(-50% + (var(--testimonial-width) * 2) + (var(--testimonial-gap) * 2))) scale(0.9);
+}
+
+.testimonial-title {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 18px;
+  color: #5abe86;
+  font-size: 15px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.testimonial-text {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 18px;
+  line-height: 1.68;
+  font-weight: 400;
+  letter-spacing: -0.15px;
+  word-spacing: 0;
+  text-align: left;
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  cursor: pointer;
+}
+
+.testimonials-nav {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.testimonials-btn {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  border: 1px solid rgba(205, 216, 236, 0.32);
+  background: rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease,
+    color 220ms ease;
+}
+
+.testimonials-btn:hover {
+  background: rgba(255, 255, 255, 0.075);
+  border-color: rgba(205, 216, 236, 0.55);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1180px) {
+  .testimonials-slider {
+    --testimonial-width: 520px;
+    --testimonial-height: 360px;
+    --testimonial-gap: 30px;
+  }
+
+  .testimonial-card {
+    padding: 28px 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 72px 0 70px;
+  }
+
+  .testimonials-slider {
+    --testimonial-width: min(90vw, 520px);
+    --testimonial-height: 420px;
+    --testimonial-gap: 30px;
+    margin-top: 54px;
+  }
+
+  .testimonial-card {
+    padding: 24px 24px;
+  }
+
+  .testimonial-card.is-prev,
+  .testimonial-card.is-next,
+  .testimonial-card.is-hidden-left,
+  .testimonial-card.is-hidden-right {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .testimonial-title {
+    margin-bottom: 14px;
+    font-size: 14px;
+  }
+
+  .testimonials-head h2 {
+    font-size: 34px;
+  }
+
+  .testimonials-head p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .testimonials-slider {
+    --testimonial-height: 470px;
+  }
+}
+</style>
+</head>
+
+<body>
+<section class="testimonials-section">
+  <div class="testimonials-container">
+    <div class="testimonials-head">
+      <span class="testimonials-pill">
+        <!-- <span class="testimonials-pill-icon">↗</span> -->
+         <img src="./testG.png" alt="Global Presence Icon" class="testimonials-pill-icon" />
+       Global Presence
+      </span>
+
+      <h2>Delivering Workforce <br> Solutions At Enterprise Scale</h2>
+
+      <p>
+From startups to global enterprises, we've helped organizations build, scale, and optimize high-performing teams worldwide.      </p>
+    </div>
+
+    <div class="testimonials-slider" id="testimonialsSlider">
+      <div class="testimonials-viewport">
+        <div class="testimonials-track" id="testimonialsTrack"></div>
+      </div>
+
+      <div class="testimonials-nav">
+        <button class="testimonials-btn" id="testimonialsPrev" aria-label="Previous story">‹</button>
+        <button class="testimonials-btn" id="testimonialsNext" aria-label="Next story">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+ const stories = [
+  {
+    title: "1000+ Employees Scaled",
+    text: "Built a GCC and Shared Services Center for a Washington-based IT solutions provider operating across 120+ countries. Supported digital transformation, operations, client support, sales, marketing, HR, legal, and finance teams delivering cloud, cybersecurity, networking, and managed services alongside partners including Microsoft, Apple, Cisco, Lenovo, and Adobe."
+  },
+  {
+    title: "100+ Employees Scaled",
+    text: "Built a GCC setup for California-based America’s first FedRAMP-authorized UCaaS provider. Supported engineering, operations, client support, and finance teams delivering secure cloud communications and subscription-based collaboration services for enterprise customers."
+  },
+  {
+    title: "250+ Employees Scaled",
+    text: "Built a GCC setup for a California-based cloud infrastructure provider supporting engineering, operations, inside sales, helpdesk, SOC, and finance teams. The organization delivers hosted desktops, IaaS, DaaS, and cloud security services through SOC, ISO, NIST, and PCI-compliant infrastructure."
+  },
+  {
+    title: "250+ Employees Scaled",
+    text: "Built a delivery center for a North America-based BPO provider supporting call center operations, sales, helpdesk, and finance teams. The organization delivers customer care, collections, cloud migration, analytics, and accounting services for small and mid-market businesses."
+  },
+  {
+    title: "400+ Employees Scaled",
+    text: "Built a GCC setup for a multi-billion dollar US technology solutions provider serving business, government, and education sectors across North America and the UK. Supported supply chain, sales, helpdesk, marketing, IT, HR, and finance operations across hardware, software, logistics, and managed IT services."
+  }
+];
+  const track = document.getElementById("testimonialsTrack");
+  const prev = document.getElementById("testimonialsPrev");
+  const next = document.getElementById("testimonialsNext");
+  const slider = document.getElementById("testimonialsSlider");
+
+  const cards = [];
+  let activeIndex = 0;
+  let timer;
+
+  function mod(value, length) {
+    return ((value % length) + length) % length;
+  }
+
+  function buildStories() {
+    stories.forEach(function (story, index) {
+      const card = document.createElement("article");
+      card.className = "testimonial-card";
+      card.innerHTML = `
+        <h3 class="testimonial-title">${story.title}</h3>
+        <p class="testimonial-text">${story.text}</p>
+      `;
+
+      card.addEventListener("click", function () {
+        activeIndex = index;
+        renderStories();
+        startAuto();
+      });
+
+      track.appendChild(card);
+      cards.push(card);
+    });
+  }
+
+  function renderStories() {
+    const total = stories.length;
+
+    cards.forEach(function (card, index) {
+      card.className = "testimonial-card";
+
+      const forwardDistance = mod(index - activeIndex, total);
+      const backwardDistance = mod(activeIndex - index, total);
+
+      if (forwardDistance === 0) {
+        card.classList.add("is-active");
+      } else if (backwardDistance === 1) {
+        card.classList.add("is-prev");
+      } else if (forwardDistance === 1) {
+        card.classList.add("is-next");
+      } else if (forwardDistance < backwardDistance) {
+        card.classList.add("is-hidden-right");
+      } else {
+        card.classList.add("is-hidden-left");
+      }
+    });
+  }
+
+  function goNext() {
+    activeIndex = mod(activeIndex + 1, stories.length);
+    renderStories();
+  }
+
+  function goPrev() {
+    activeIndex = mod(activeIndex - 1, stories.length);
+    renderStories();
+  }
+
+  function startAuto() {
+    stopAuto();
+    timer = setInterval(goNext, 5200);
+  }
+
+  function stopAuto() {
+    clearInterval(timer);
+  }
+
+  prev.addEventListener("click", function () {
+    goPrev();
+    startAuto();
+  });
+
+  next.addEventListener("click", function () {
+    goNext();
+    startAuto();
+  });
+
+  slider.addEventListener("mouseenter", stopAuto);
+  slider.addEventListener("mouseleave", startAuto);
+
+  buildStories();
+  renderStories();
+  startAuto();
+});
+</script>
+</body>
+</html>
