@@ -970,22 +970,44 @@
     }
 
     .gcc-model-icon {
-      width: 36px;
-      height: 36px;
-      margin-bottom: 16px;
-      color: #111827;
-    }
-
-    .gcc-model-icon img,
-    .gcc-model-icon svg {
-      width: 100%;
-      height: 100%;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
       display: block;
-      object-fit: contain;
+      background-color: #000d25;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-size: contain;
+      mask-size: contain;
     }
 
-    .gcc-model-icon svg {
-      stroke-width: 1.45;
+    .gcc-icon-customer {
+      -webkit-mask-image: url("https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Horizontal-Slider-2%20Streamline%20Sharp.svg");
+      mask-image: url("https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Horizontal-Slider-2%20Streamline%20Sharp.svg");
+    }
+    
+    .gcc-icon-flash {
+      -webkit-mask-image: url("https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Flash-Timer%20Streamline%20Sharp-Neon.svg");
+      mask-image: url("https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Flash-Timer%20Streamline%20Sharp-Neon.svg");
+    }
+    
+    .gcc-icon-slider {
+      -webkit-mask-image: url("https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Customer-Relationship-Management-Lead-Management-1%20Streamline%20Ultimate.svg");
+      mask-image: url("https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Customer-Relationship-Management-Lead-Management-1%20Streamline%20Ultimate.svg");
+    }
+
+    .gcc-icon-replace {
+      -webkit-mask-image: url("https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Vector.svg");
+      mask-image: url("https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Vector.svg");
+    }
+
+    html.ts-dark-mode .gcc-model-icon,
+    html[data-theme="dark"] .gcc-model-icon,
+    body.dark-mode .gcc-model-icon,
+    body.ts-dark .gcc-model-icon {
+      background-color: #ffffff;
     }
 
     .gcc-model-card h3 {
@@ -2043,36 +2065,28 @@
 
         <div class="gcc-model-grid">
           <article class="gcc-model-card ts-soft-card">
-            <span class="gcc-model-icon"><img
-                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/File.png" alt=""
-                loading="lazy" /></span>
+            <span class="gcc-model-icon gcc-icon-customer"></span>
             <h3>Pay for what you use</h3>
             <span class="gcc-card-line"></span>
             <p>No fixed costs — you’re billed only for actual hours or project scope.</p>
           </article>
 
           <article class="gcc-model-card ts-soft-card">
-            <span class="gcc-model-icon"><img
-                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(3).png" alt=""
-                loading="lazy" /></span>
+            <span class="gcc-model-icon gcc-icon-flash"></span>
             <h3>Fast hiring process</h3>
             <span class="gcc-card-line"></span>
             <p>Get qualified, pre-vetted candidates within days, not weeks.</p>
           </article>
 
           <article class="gcc-model-card ts-soft-card">
-            <span class="gcc-model-icon"><img
-                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png"
-                alt="" loading="lazy" /></span>
+            <span class="gcc-model-icon gcc-icon-slider"></span>
             <h3>Full control</h3>
             <span class="gcc-card-line"></span>
             <p>You manage the resource directly, just like your in-house team.</p>
           </article>
 
           <article class="gcc-model-card ts-soft-card">
-            <span class="gcc-model-icon"><img
-                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(2).png" alt=""
-                loading="lazy" /></span>
+            <span class="gcc-model-icon gcc-icon-replace"></span>
             <h3>Easy replacement</h3>
             <span class="gcc-card-line"></span>
             <p>Not the right fit? We replace at no additional cost.</p>
