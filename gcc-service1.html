@@ -762,6 +762,22 @@
       margin: 14px auto 0;
     }
 
+    @keyframes gcc-ring-pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(0.72);
+        opacity: 0;
+      }
+
+      18% {
+        opacity: 0.92;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1.08);
+        opacity: 0;
+      }
+    }
+
     .gcc-stats-grid::before,
     .gcc-stats-grid::after {
       content: "";
@@ -773,10 +789,16 @@
       border: 5px solid rgba(255, 255, 255, 0.9);
       pointer-events: none;
       z-index: 0;
+      will-change: transform, opacity;
+      animation: gcc-ring-pulse 4.8s ease-out infinite;
     }
 
     .gcc-stats-grid::before { width: 710px; height: 710px; }
-    .gcc-stats-grid::after { width: 610px; height: 610px; }
+    .gcc-stats-grid::after {
+      width: 610px;
+      height: 610px;
+      animation-delay: 2.4s;
+    }
 
     .gcc-stat-card {
       position: absolute;
@@ -863,6 +885,14 @@
       color: rgba(255, 255, 255, 0.72);
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      .gcc-stats-grid::before,
+      .gcc-stats-grid::after {
+        animation: none;
+        opacity: 1;
+      }
+    }
+
     .gcc-stat-card:nth-child(2) p,
     .gcc-stat-card:nth-child(5) p {
       margin-top: 68px;
@@ -912,22 +942,19 @@
     }
 
     .gcc-model-icon {
-      width: 36px;
-      height: 36px;
-      margin-bottom: 16px;
-      color: #111827;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 20px;
+      color: #000d25;
     }
 
-    .gcc-model-icon img,
-    .gcc-model-icon svg {
+    .gcc-model-icon img {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: contain;
-    }
-
-    .gcc-model-icon svg {
-      stroke-width: 1.45;
+      filter: none;
+      transition: filter 0.8s ease-in-out;
     }
 
     .gcc-model-card h3 {
@@ -957,6 +984,42 @@
       font-weight: 400;
       letter-spacing: -0.18px;
       max-width: 222px;
+    }
+
+    html.ts-dark-mode .gcc-model-card,
+    html[data-theme="dark"] .gcc-model-card,
+    body.dark-mode .gcc-model-card,
+    body.ts-dark .gcc-model-card {
+      background: rgba(24, 27, 34, 0.8);
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    html.ts-dark-mode .gcc-model-card h3,
+    html[data-theme="dark"] .gcc-model-card h3,
+    body.dark-mode .gcc-model-card h3,
+    body.ts-dark .gcc-model-card h3 {
+      color: #ffffff;
+    }
+
+    html.ts-dark-mode .gcc-model-card p,
+    html[data-theme="dark"] .gcc-model-card p,
+    body.dark-mode .gcc-model-card p,
+    body.ts-dark .gcc-model-card p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    html.ts-dark-mode .gcc-model-card .gcc-card-line,
+    html[data-theme="dark"] .gcc-model-card .gcc-card-line,
+    body.dark-mode .gcc-model-card .gcc-card-line,
+    body.ts-dark .gcc-model-card .gcc-card-line {
+      background: #ffffff;
+    }
+
+    html.ts-dark-mode .gcc-model-icon img,
+    html[data-theme="dark"] .gcc-model-icon img,
+    body.dark-mode .gcc-model-icon img,
+    body.ts-dark .gcc-model-icon img {
+      filter: brightness(0) invert(1);
     }
 
     /* ================= CTA ================= */
@@ -1755,7 +1818,7 @@
           <p class="gcc-section-copy">
             This model is ideal when you’re building a permanent offshore presence with full ownership, control, and scalability — without relying on third-party delivery models.
           </p>
-        </div>
+        </div> 
 
        <div class="gcc-usecases-grid">
   <article class="gcc-usecase-card ts-light-card">
@@ -1969,10 +2032,57 @@
         </div>
 
         <div class="gcc-model-grid">
-          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png" alt="" loading="lazy" /></span><h3>Single Point of Contact</h3><span class="gcc-card-line"></span><p>Manager ensures clear communication and consistent delivery — no confusion.</p></article>
-          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor"/><path d="M9 9l6 3-3 2-1 4-2-9Z" stroke="currentColor"/></svg></span><h3>Outcome-Driven Delivery</h3><span class="gcc-card-line"></span><p>We take ownership of results — with defined deliverables, KPIs, and accountability from day one.</p></article>
-          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Signal-Full%20Streamline%20Sharp.png" alt="" loading="lazy" /></span><h3>Transparent Operations</h3><span class="gcc-card-line"></span><p>We take ownership of results — with defined deliverables, KPIs, and accountability from day one.</p></article>
-          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Trending-Up%20Streamline%20Outlined-Streamline-Material-Free.png" alt="" loading="lazy" /></span><h3>Built to Scale</h3><span class="gcc-card-line"></span><p>Easily expand or restructure your team as your business grows and needs evolve.</p></article>
+          <article class="gcc-model-card ts-soft-card">
+            <span class="gcc-model-icon">
+              <img
+                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.svg"
+                alt=""
+                loading="lazy"
+              />
+            </span>
+            <h3>Single Point Of Contact</h3>
+            <span class="gcc-card-line"></span>
+            <p>Our Lead ensures clear communication and consistent delivery — no confusion.</p>
+          </article>
+
+          <article class="gcc-model-card ts-soft-card">
+            <span class="gcc-model-icon">
+              <img
+                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Cursor-Highlight-Click-1%20Streamline%20Freehand.svg"
+                alt=""
+                loading="lazy"
+              />
+            </span>
+            <h3>Outcome-Driven Delivery</h3>
+            <span class="gcc-card-line"></span>
+            <p>We drive results with clear deliverables, KPIs, SLAs, and accountability from day one.</p>
+          </article>
+
+          <article class="gcc-model-card ts-soft-card">
+            <span class="gcc-model-icon">
+              <img
+                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Signal-Full%20Streamline%20Sharp.svg"
+                alt=""
+                loading="lazy"
+              />
+            </span>
+            <h3>Transparent Operations</h3>
+            <span class="gcc-card-line"></span>
+            <p>We provide complete visibility through weekly updates, MBRs and QBRs.</p>
+          </article>
+
+          <article class="gcc-model-card ts-soft-card">
+            <span class="gcc-model-icon">
+              <img
+                src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Trending-Up%20Streamline%20Outlined-Streamline-Material-Free.svg"
+                alt=""
+                loading="lazy"
+              />
+            </span>
+            <h3>Built To Scale</h3>
+            <span class="gcc-card-line"></span>
+            <p>Easily expand or restructure your team as your business grows and needs evolve.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -1983,59 +2093,167 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const accordion = document.getElementById("gccProcessAccordion");
-      if (!accordion) return;
+      if (accordion) {
+        const steps = Array.from(accordion.querySelectorAll(".gcc-step"));
+        const desktopHover = window.matchMedia("(hover: hover) and (pointer: fine)");
+        let activeIndex = 0;
+        let resizeTimer;
 
-      const steps = Array.from(accordion.querySelectorAll(".gcc-step"));
-      const desktopHover = window.matchMedia("(hover: hover) and (pointer: fine)");
-      let activeIndex = 0;
-      let resizeTimer;
+        function getClosedHeight() {
+          const value = getComputedStyle(accordion).getPropertyValue("--closed-height");
+          return parseFloat(value) || 88;
+        }
 
-      function getClosedHeight() {
-        const value = getComputedStyle(accordion).getPropertyValue("--closed-height");
-        return parseFloat(value) || 88;
-      }
+        function getOpenHeight(step) {
+          const openPanel = step.querySelector(".gcc-step-open");
+          return Math.ceil(openPanel.scrollHeight);
+        }
 
-      function getOpenHeight(step) {
-        const openPanel = step.querySelector(".gcc-step-open");
-        return Math.ceil(openPanel.scrollHeight);
-      }
+        function setStepHeight(step, isOpen) {
+          step.style.height = isOpen ? getOpenHeight(step) + "px" : getClosedHeight() + "px";
+        }
 
-      function setStepHeight(step, isOpen) {
-        step.style.height = isOpen ? getOpenHeight(step) + "px" : getClosedHeight() + "px";
-      }
+        function openStep(index) {
+          activeIndex = Number(index);
+          steps.forEach(function (step, i) {
+            const isOpen = i === activeIndex;
+            step.classList.toggle("is-open", isOpen);
+            step.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            setStepHeight(step, isOpen);
+          });
+        }
 
-      function openStep(index) {
-        activeIndex = Number(index);
-        steps.forEach(function (step, i) {
-          const isOpen = i === activeIndex;
-          step.classList.toggle("is-open", isOpen);
-          step.setAttribute("aria-expanded", isOpen ? "true" : "false");
-          setStepHeight(step, isOpen);
+        steps.forEach(function (step, index) {
+          step.addEventListener("click", function () { openStep(index); });
+          step.addEventListener("mouseenter", function () { if (desktopHover.matches) openStep(index); });
+          step.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              openStep(index);
+            }
+          });
         });
+
+        function refreshHeights() {
+          steps.forEach(function (step, index) { setStepHeight(step, index === activeIndex); });
+        }
+
+        window.addEventListener("resize", function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(refreshHeights, 120);
+        });
+
+        window.addEventListener("load", refreshHeights);
+        openStep(0);
       }
 
-      steps.forEach(function (step, index) {
-        step.addEventListener("click", function () { openStep(index); });
-        step.addEventListener("mouseenter", function () { if (desktopHover.matches) openStep(index); });
-        step.addEventListener("keydown", function (event) {
-          if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            openStep(index);
+      const statsGrid = document.querySelector(".gcc-pakistan .gcc-stats-grid");
+      if (!statsGrid) return;
+
+      const statValues = Array.from(statsGrid.querySelectorAll(".gcc-stat-card strong"));
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      function parseStat(text) {
+        const value = text.trim();
+
+        if (/^\d+(?:\.\d+)?(?:st|nd|rd|th)$/i.test(value)) {
+          return null;
+        }
+
+        if (/^Top\s+\d+$/i.test(value)) {
+          return {
+            type: "prefix",
+            target: Number(value.replace(/[^\d.]/g, "")),
+            prefix: "Top ",
+            suffix: "",
+            decimals: 0
+          };
+        }
+
+        if (/^\d+(?:\.\d+)?K\+$/i.test(value)) {
+          return {
+            type: "suffix",
+            target: Number(value.replace(/[^\d.]/g, "")),
+            prefix: "",
+            suffix: "K+",
+            decimals: value.includes(".") ? 1 : 0
+          };
+        }
+
+        if (/^\d+(?:\.\d+)?%$/.test(value)) {
+          const decimals = (value.split(".")[1] || "").replace("%", "").length;
+          return {
+            type: "suffix",
+            target: Number(value.replace("%", "")),
+            prefix: "",
+            suffix: "%",
+            decimals: decimals
+          };
+        }
+
+        if (/^\d+(?:\.\d+)?$/.test(value)) {
+          return {
+            type: "plain",
+            target: Number(value),
+            prefix: "",
+            suffix: "",
+            decimals: value.includes(".") ? (value.split(".")[1] || "").length : 0
+          };
+        }
+
+        return null;
+      }
+
+      function formatValue(current, config) {
+        const rounded = config.decimals > 0
+          ? current.toFixed(config.decimals)
+          : Math.round(current).toString();
+
+        return config.prefix + rounded + config.suffix;
+      }
+
+      function animateStat(element) {
+        const config = parseStat(element.textContent);
+        if (!config) return;
+
+        if (reducedMotion.matches) {
+          element.textContent = formatValue(config.target, config);
+          return;
+        }
+
+        const duration = 1600;
+        const startTime = performance.now();
+
+        function tick(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = config.target * eased;
+
+          element.textContent = formatValue(current, config);
+
+          if (progress < 1) {
+            window.requestAnimationFrame(tick);
+          } else {
+            element.textContent = formatValue(config.target, config);
           }
-        });
-      });
+        }
 
-      function refreshHeights() {
-        steps.forEach(function (step, index) { setStepHeight(step, index === activeIndex); });
+        element.textContent = formatValue(0, config);
+        window.requestAnimationFrame(tick);
       }
 
-      window.addEventListener("resize", function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(refreshHeights, 120);
+      const observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+
+          statValues.forEach(animateStat);
+          obs.disconnect();
+        });
+      }, {
+        threshold: 0.35
       });
 
-      window.addEventListener("load", refreshHeights);
-      openStep(0);
+      observer.observe(statsGrid);
     });
   </script>
 </body>
