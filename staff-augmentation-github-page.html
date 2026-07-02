@@ -147,10 +147,12 @@
     }
 
     .gcc-hero-inner {
+      width: min(100% - 56px, 1440px);
+      margin: 0 auto;
       position: relative;
       z-index: 2;
       display: grid;
-      max-width: 1225px;
+      max-width: 1440px;
       grid-template-columns: minmax(0, 1fr) 380px;
       gap: 72px;
       align-items: center;
@@ -816,8 +818,10 @@
       min-height: 232px;
       padding: 42px 24px 28px;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.92);
       border: 1px solid rgba(255, 255, 255, 0.9);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
       box-shadow: none;
       text-align: center;
     }
@@ -884,6 +888,37 @@
       line-height: 1.42;
       font-weight: 300;
       letter-spacing: -0.18px;
+    }
+
+    html.ts-dark-mode .gcc-pakistan .gcc-stat-card,
+    html[data-theme="dark"] .gcc-pakistan .gcc-stat-card,
+    body.dark-mode .gcc-pakistan .gcc-stat-card,
+    body.ts-dark .gcc-pakistan .gcc-stat-card {
+      background: rgba(24, 27, 34, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    html.ts-dark-mode .gcc-pakistan .gcc-stat-card strong,
+    html[data-theme="dark"] .gcc-pakistan .gcc-stat-card strong,
+    body.dark-mode .gcc-pakistan .gcc-stat-card strong,
+    body.ts-dark .gcc-pakistan .gcc-stat-card strong {
+      color: #ffffff;
+    }
+
+    html.ts-dark-mode .gcc-pakistan .gcc-stat-card h3,
+    html[data-theme="dark"] .gcc-pakistan .gcc-stat-card h3,
+    body.dark-mode .gcc-pakistan .gcc-stat-card h3,
+    body.ts-dark .gcc-pakistan .gcc-stat-card h3 {
+      color: #ffffff;
+    }
+
+    html.ts-dark-mode .gcc-pakistan .gcc-stat-card p,
+    html[data-theme="dark"] .gcc-pakistan .gcc-stat-card p,
+    body.dark-mode .gcc-pakistan .gcc-stat-card p,
+    body.ts-dark .gcc-pakistan .gcc-stat-card p {
+      color: rgba(255, 255, 255, 0.72);
     }
 
     .gcc-stat-card:nth-child(2) p,
@@ -1229,6 +1264,10 @@
       .gcc-container,
       .gcc-process-container {
         width: min(100% - 30px, var(--container));
+      }
+
+      .gcc-hero-inner {
+        width: min(100% - 30px, 1440px);
       }
 
       .gcc-hero {
@@ -1646,7 +1685,7 @@
   <div class="gcc-page">
 
     <!-- HERO -->
-    <section class="gcc-hero">
+    <section class="gcc-hero ts-keep-dark">
       <div class="gcc-container gcc-hero-inner">
         <div class="gcc-hero-copy-wrap">
           <p class="gcc-hero-label">Time &amp; Material Model</p>
@@ -1678,7 +1717,7 @@
     </section>
 
     <!-- FLEXIBLE HIRING -->
-    <section class="gcc-managed-team" id="why-us">
+    <section class="gcc-managed-team ts-light-section" id="why-us">
       <div class="gcc-container gcc-managed-grid">
         <div class="gcc-managed-image">
           <img
@@ -1706,7 +1745,7 @@
     </section>
 
     <!-- USE CASES -->
-    <section class="gcc-usecases" id="services">
+    <section class="gcc-usecases ts-light-section" id="services">
       <div class="gcc-container">
         <div class="gcc-section-head">
           <p class="gcc-label"><span class="gcc-label-strong">Use</span> Cases</p>
@@ -1722,7 +1761,7 @@
         </div>
 
         <div class="gcc-usecases-grid">
-          <article class="gcc-usecase-card">
+          <article class="gcc-usecase-card ts-light-card">
             <span class="gcc-usecase-icon">
               <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon.png"
                 alt="Short-term projects icon" loading="lazy" />
@@ -1731,7 +1770,7 @@
             <p>Support sprints, launches, campaigns, or migrations with the right talent.</p>
           </article>
 
-          <article class="gcc-usecase-card">
+          <article class="gcc-usecase-card ts-soft-card">
             <span class="gcc-usecase-icon">
               <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(1).png"
                 alt="Temporary gaps icon" loading="lazy" />
@@ -1740,7 +1779,7 @@
             <p>Cover leaves, or sudden workload spikes without slowing down your team.</p>
           </article>
 
-          <article class="gcc-usecase-card">
+          <article class="gcc-usecase-card ts-light-card">
             <span class="gcc-usecase-icon">
               <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(2).png"
                 alt="Temporary gaps icon" loading="lazy" />
@@ -1749,7 +1788,7 @@
             <p>Bring in specialized skills your team doesn’t have on demand.</p>
           </article>
 
-          <article class="gcc-usecase-card">
+          <article class="gcc-usecase-card ts-soft-card">
             <span class="gcc-usecase-icon">
               <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon5.png"
                 alt="Urgent hiring icon" loading="lazy" />
@@ -1758,7 +1797,7 @@
             <p>Get qualified candidates in days, not weeks.</p>
           </article>
 
-          <article class="gcc-usecase-card">
+          <article class="gcc-usecase-card ts-light-card">
             <span class="gcc-usecase-icon">
               <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(3).png"
                 alt="Temporary gaps icon" loading="lazy" />
@@ -1767,7 +1806,7 @@
             <p>Test and work with Pakistan-based talent before committing long-term.</p>
           </article>
 
-          <article class="gcc-usecase-card">
+          <article class="gcc-usecase-card ts-soft-card">
             <span class="gcc-usecase-icon">
               <img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20(4).png"
                 alt="Temporary gaps icon" loading="lazy" />
@@ -1780,7 +1819,7 @@
     </section>
 
     <!-- PROCESS / HORIZONTAL CARD SECTION -->
-    <section class="gcc-process-section">
+    <section class="gcc-process-section ts-keep-dark">
       <div class="gcc-process-container">
         <div class="gcc-process-header">
           <div>
@@ -1796,7 +1835,7 @@
         <div class="gcc-process-accordion" id="gccProcessAccordion">
   <!-- 01 -->
   <article
-    class="gcc-process-card active"
+    class="gcc-process-card ts-keep-dark active"
     data-index="0"
     style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')"
     role="button"
@@ -1835,7 +1874,7 @@
 
   <!-- 02 -->
   <article
-    class="gcc-process-card"
+    class="gcc-process-card ts-keep-dark"
     data-index="1"
     style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')"
     role="button"
@@ -1871,7 +1910,7 @@
 
   <!-- 03 -->
   <article
-    class="gcc-process-card"
+    class="gcc-process-card ts-keep-dark"
     data-index="2"
     style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')"
     role="button"
@@ -1909,7 +1948,7 @@
 
   <!-- 04 -->
   <article
-    class="gcc-process-card"
+    class="gcc-process-card ts-keep-dark"
     data-index="3"
     style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')"
     role="button"
@@ -1947,7 +1986,7 @@
 
   <!-- 05 -->
   <article
-    class="gcc-process-card"
+    class="gcc-process-card ts-keep-dark"
     data-index="4"
     style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')"
     role="button"
@@ -1988,7 +2027,7 @@
     </section>
 
     <!-- WHY THIS MODEL WORKS -->
-    <section class="gcc-model-works">
+    <section class="gcc-model-works ts-light-section">
       <div class="gcc-container">
         <div class="gcc-model-head">
           <div>
@@ -2003,7 +2042,7 @@
         </div>
 
         <div class="gcc-model-grid">
-          <article class="gcc-model-card">
+          <article class="gcc-model-card ts-soft-card">
             <span class="gcc-model-icon"><img
                 src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/File.png" alt=""
                 loading="lazy" /></span>
@@ -2012,7 +2051,7 @@
             <p>No fixed costs — you’re billed only for actual hours or project scope.</p>
           </article>
 
-          <article class="gcc-model-card">
+          <article class="gcc-model-card ts-soft-card">
             <span class="gcc-model-icon"><img
                 src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(3).png" alt=""
                 loading="lazy" /></span>
@@ -2021,7 +2060,7 @@
             <p>Get qualified, pre-vetted candidates within days, not weeks.</p>
           </article>
 
-          <article class="gcc-model-card">
+          <article class="gcc-model-card ts-soft-card">
             <span class="gcc-model-icon"><img
                 src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png"
                 alt="" loading="lazy" /></span>
@@ -2030,7 +2069,7 @@
             <p>You manage the resource directly, just like your in-house team.</p>
           </article>
 
-          <article class="gcc-model-card">
+          <article class="gcc-model-card ts-soft-card">
             <span class="gcc-model-icon"><img
                 src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(2).png" alt=""
                 loading="lazy" /></span>

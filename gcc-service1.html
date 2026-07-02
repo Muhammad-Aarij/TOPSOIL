@@ -146,10 +146,12 @@
     }
 
     .gcc-hero-inner {
+      width: min(100% - 56px, 1440px);
+      margin: 0 auto;
       position: relative;
       z-index: 2;
       display: grid;
-      max-width: 1225px;
+      max-width: 1440px;
       grid-template-columns: minmax(0, 1fr) 380px;
       gap: 72px;
       align-items: center;
@@ -783,8 +785,10 @@
       min-height: 232px;
       padding: 42px 24px 28px;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.92);
       border: 1px solid rgba(255, 255, 255, 0.9);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
       box-shadow: none;
       text-align: center;
     }
@@ -807,7 +811,7 @@
 
     .gcc-stat-card h3 {
       margin: 14px 0 0;
-      color: #1b3664;
+      color: #111827;
       font-size: 13px;
       line-height: 1.25;
       font-weight: 700;
@@ -826,6 +830,37 @@
       line-height: 1.42;
       font-weight: 300;
       letter-spacing: -0.18px;
+    }
+
+    html.ts-dark-mode .gcc-pakistan .gcc-stat-card,
+    html[data-theme="dark"] .gcc-pakistan .gcc-stat-card,
+    body.dark-mode .gcc-pakistan .gcc-stat-card,
+    body.ts-dark .gcc-pakistan .gcc-stat-card {
+      background: rgba(24, 27, 34, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    html.ts-dark-mode .gcc-pakistan .gcc-stat-card strong,
+    html[data-theme="dark"] .gcc-pakistan .gcc-stat-card strong,
+    body.dark-mode .gcc-pakistan .gcc-stat-card strong,
+    body.ts-dark .gcc-pakistan .gcc-stat-card strong {
+      color: #ffffff;
+    }
+
+    html.ts-dark-mode .gcc-pakistan .gcc-stat-card h3,
+    html[data-theme="dark"] .gcc-pakistan .gcc-stat-card h3,
+    body.dark-mode .gcc-pakistan .gcc-stat-card h3,
+    body.ts-dark .gcc-pakistan .gcc-stat-card h3 {
+      color: #ffffff;
+    }
+
+    html.ts-dark-mode .gcc-pakistan .gcc-stat-card p,
+    html[data-theme="dark"] .gcc-pakistan .gcc-stat-card p,
+    body.dark-mode .gcc-pakistan .gcc-stat-card p,
+    body.ts-dark .gcc-pakistan .gcc-stat-card p {
+      color: rgba(255, 255, 255, 0.72);
     }
 
     .gcc-stat-card:nth-child(2) p,
@@ -1208,6 +1243,10 @@
       .gcc-container,
       .gcc-process-container {
         width: min(100% - 30px, var(--container));
+      }
+
+      .gcc-hero-inner {
+        width: min(100% - 30px, 1440px);
       }
 
       .gcc-hero {
@@ -1635,7 +1674,7 @@
 
 
     <!-- HERO -->
-    <section class="gcc-hero">
+    <section class="gcc-hero ts-keep-dark">
       <div class="gcc-container gcc-hero-inner">
         <div class="gcc-hero-copy-wrap">
           <p class="gcc-hero-label">Offshore Ownership Model</p>
@@ -1675,7 +1714,7 @@
     </section>
 
     <!-- FULLY MANAGED TEAM -->
-    <section class="gcc-managed-team" id="why-us">
+    <section class="gcc-managed-team ts-light-section" id="why-us">
       <div class="gcc-container gcc-managed-grid">
         <div class="gcc-managed-image">
          <img
@@ -1704,7 +1743,7 @@
     </section>
 
     <!-- USE CASES -->
-    <section class="gcc-usecases" id="services">
+    <section class="gcc-usecases ts-light-section" id="services">
       <div class="gcc-container">
         <div class="gcc-section-head">
           <p class="gcc-label"><span class="gcc-label-strong">Use</span> Cases</p>
@@ -1719,7 +1758,7 @@
         </div>
 
        <div class="gcc-usecases-grid">
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-light-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Icon%20card.png"
@@ -1731,7 +1770,7 @@
     <p>Establish a permanent offshore extension with full operational ownership.</p>
   </article>
 
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-soft-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Icon%20card%20(1).png"
@@ -1743,7 +1782,7 @@
     <p>Build dedicated teams focused on innovation, automation, and growth.</p>
   </article>
 
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-light-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Icon%20card%20(2).png"
@@ -1755,7 +1794,7 @@
     <p>Expand teams and operations seamlessly as your business grows.</p>
   </article>
 
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-soft-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Icon%20card%20(3).png"
@@ -1767,7 +1806,7 @@
     <p>Reduce costs while maintaining quality through efficient global delivery.</p>
   </article>
 
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-light-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Icon%20card%20(4).png"
@@ -1779,7 +1818,7 @@
     <p>Access skilled global talent across technology and business functions.</p>
   </article>
 
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-soft-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Icon%20card%20(5).png"
@@ -1795,7 +1834,7 @@
     </section>
 
     <!-- PROCESS / VERTICAL CARD SECTION -->
-    <section class="gcc-process-section">
+    <section class="gcc-process-section ts-keep-dark">
       <div class="gcc-process-container">
         <div class="gcc-process-header">
           <div>
@@ -1888,7 +1927,7 @@
     </section>
 
     <!-- WHY PAKISTAN -->
-    <section class="gcc-pakistan">
+    <section class="gcc-pakistan ts-muted-section">
       <div class="gcc-container">
         <div class="gcc-pakistan-head">
           <div>
@@ -1905,18 +1944,18 @@
         </div>
 
         <div class="gcc-stats-grid">
-          <article class="gcc-stat-card"><strong>800K+</strong><h3>STEM GRADUATES</h3><p>A large, continuously growing pipeline of engineering and technical talent.</p></article>
-          <article class="gcc-stat-card"><strong>100%</strong><h3>Foreign Ownership</h3><p>Full ownership allowed — no local partner required.</p></article>
-          <article class="gcc-stat-card"><strong>63%</strong><h3>Workforce Under 30</h3><p>Young, adaptable workforce aligned with modern global work environments.</p></article>
-          <article class="gcc-stat-card"><strong>0.25%</strong><h3>Export Tax</h3><p>Highly competitive tax structure for GCC and IT export operations.</p></article>
-          <article class="gcc-stat-card"><strong>3rd</strong><h3>Largest English-speaking workforce</h3><p>Strong communication and global workforce compatibility</p></article>
-          <article class="gcc-stat-card"><strong>Top 10</strong><h3>Global freelancer market</h3><p>Projected to remain strong among global leaders</p></article>
+          <article class="gcc-stat-card ts-light-card"><strong>800K+</strong><h3>STEM GRADUATES</h3><p>A large, continuously growing pipeline of engineering and technical talent.</p></article>
+          <article class="gcc-stat-card ts-light-card"><strong>100%</strong><h3>Foreign Ownership</h3><p>Full ownership allowed — no local partner required.</p></article>
+          <article class="gcc-stat-card ts-light-card"><strong>63%</strong><h3>Workforce Under 30</h3><p>Young, adaptable workforce aligned with modern global work environments.</p></article>
+          <article class="gcc-stat-card ts-light-card"><strong>0.25%</strong><h3>Export Tax</h3><p>Highly competitive tax structure for GCC and IT export operations.</p></article>
+          <article class="gcc-stat-card ts-light-card"><strong>3rd</strong><h3>Largest English-speaking workforce</h3><p>Strong communication and global workforce compatibility</p></article>
+          <article class="gcc-stat-card ts-light-card"><strong>Top 10</strong><h3>Global freelancer market</h3><p>Projected to remain strong among global leaders</p></article>
         </div>
       </div>
     </section>
 
     <!-- WHY THIS MODEL WORKS -->
-    <section class="gcc-model-works">
+    <section class="gcc-model-works ts-light-section">
       <div class="gcc-container">
         <div class="gcc-model-head">
           <div>
@@ -1930,10 +1969,10 @@
         </div>
 
         <div class="gcc-model-grid">
-          <article class="gcc-model-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png" alt="" loading="lazy" /></span><h3>Single Point of Contact</h3><span class="gcc-card-line"></span><p>Manager ensures clear communication and consistent delivery — no confusion.</p></article>
-          <article class="gcc-model-card"><span class="gcc-model-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor"/><path d="M9 9l6 3-3 2-1 4-2-9Z" stroke="currentColor"/></svg></span><h3>Outcome-Driven Delivery</h3><span class="gcc-card-line"></span><p>We take ownership of results — with defined deliverables, KPIs, and accountability from day one.</p></article>
-          <article class="gcc-model-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Signal-Full%20Streamline%20Sharp.png" alt="" loading="lazy" /></span><h3>Transparent Operations</h3><span class="gcc-card-line"></span><p>We take ownership of results — with defined deliverables, KPIs, and accountability from day one.</p></article>
-          <article class="gcc-model-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Trending-Up%20Streamline%20Outlined-Streamline-Material-Free.png" alt="" loading="lazy" /></span><h3>Built to Scale</h3><span class="gcc-card-line"></span><p>Easily expand or restructure your team as your business grows and needs evolve.</p></article>
+          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png" alt="" loading="lazy" /></span><h3>Single Point of Contact</h3><span class="gcc-card-line"></span><p>Manager ensures clear communication and consistent delivery — no confusion.</p></article>
+          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor"/><path d="M9 9l6 3-3 2-1 4-2-9Z" stroke="currentColor"/></svg></span><h3>Outcome-Driven Delivery</h3><span class="gcc-card-line"></span><p>We take ownership of results — with defined deliverables, KPIs, and accountability from day one.</p></article>
+          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Signal-Full%20Streamline%20Sharp.png" alt="" loading="lazy" /></span><h3>Transparent Operations</h3><span class="gcc-card-line"></span><p>We take ownership of results — with defined deliverables, KPIs, and accountability from day one.</p></article>
+          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Trending-Up%20Streamline%20Outlined-Streamline-Material-Free.png" alt="" loading="lazy" /></span><h3>Built to Scale</h3><span class="gcc-card-line"></span><p>Easily expand or restructure your team as your business grows and needs evolve.</p></article>
         </div>
       </div>
     </section>

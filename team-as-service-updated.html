@@ -146,10 +146,12 @@
     }
 
     .gcc-hero-inner {
+      width: min(100% - 56px, 1400px);
+      margin: 0 auto;
       position: relative;
       z-index: 2;
       display: grid;
-      max-width: 1225px;
+      max-width: 1440px;
       grid-template-columns: minmax(0, 1fr) 380px;
       gap: 72px;
       align-items: center;
@@ -1198,6 +1200,10 @@
         width: min(100% - 30px, var(--container));
       }
 
+      .gcc-hero-inner {
+        width: min(100% - 30px, 1440px);
+      }
+
       .gcc-hero {
         /* padding: 108px 0 64px; */
       }
@@ -1543,7 +1549,7 @@
 
 
     <!-- HERO -->
-    <section class="gcc-hero">
+    <section class="gcc-hero ts-keep-dark">
       <div class="gcc-container gcc-hero-inner">
         <div class="gcc-hero-copy-wrap">
           <p class="gcc-hero-label">Outcome-Driven Model</p>
@@ -1587,7 +1593,7 @@
     </section>
 
     <!-- FULLY MANAGED TEAM -->
-    <section class="gcc-managed-team" id="why-us">
+    <section class="gcc-managed-team ts-light-section" id="why-us">
       <div class="gcc-container gcc-managed-grid">
         <div class="gcc-managed-image">
           <img
@@ -1616,7 +1622,7 @@
     </section>
 
     <!-- USE CASES -->
-    <section class="gcc-usecases" id="services">
+    <section class="gcc-usecases ts-light-section" id="services">
       <div class="gcc-container">
         <div class="gcc-section-head">
           <p class="gcc-label"><span class="gcc-label-strong">Use</span> Cases</p>
@@ -1631,7 +1637,7 @@
         </div>
 
        <div class="gcc-usecases-grid">
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-light-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(5).png"
@@ -1643,7 +1649,7 @@
     <p>Get an entire function delivered from QA to development or operations.</p>
   </article>
 
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-soft-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(4).png"
@@ -1655,7 +1661,7 @@
     <p>Defined deliverables with no HR or management overhead.</p>
   </article>
 
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-light-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(3).png"
@@ -1667,7 +1673,7 @@
     <p>Grow your team without slowing down operations.</p>
   </article>
 
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-soft-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card.png"
@@ -1679,7 +1685,7 @@
     <p>We handle hiring, onboarding, management, and performance.</p>
   </article>
 
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-light-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(1).png"
@@ -1691,7 +1697,7 @@
     <p>Avoid inefficiencies of managing remote teams directly.</p>
   </article>
 
-  <article class="gcc-usecase-card">
+  <article class="gcc-usecase-card ts-soft-card">
     <span class="gcc-usecase-icon">
       <img
         src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/Icon%20card%20(2).png"
@@ -1707,7 +1713,7 @@
     </section>
 
     <!-- PROCESS / HORIZONTAL CARD SECTION -->
-    <section class="gcc-process-section">
+    <section class="gcc-process-section ts-keep-dark">
       <div class="gcc-process-container">
         <div class="gcc-process-header">
           <div>
@@ -1721,7 +1727,7 @@
         </div>
 
         <div class="gcc-process-accordion" id="gccProcessAccordion">
-          <article class="gcc-process-card active" data-index="0" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="true">
+          <article class="gcc-process-card ts-keep-dark active" data-index="0" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="true">
             <div class="gcc-active-card-content">
               <h3>Discovery &amp; Scoping</h3>
               <div class="gcc-active-card-bottom">
@@ -1739,7 +1745,7 @@
             </div>
           </article>
 
-          <article class="gcc-process-card" data-index="1" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
+          <article class="gcc-process-card ts-keep-dark" data-index="1" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
             <div class="gcc-active-card-content gcc-simple-active">
               <h3>Solution Design &amp; Team Blueprint</h3>
               <div class="gcc-active-card-bottom">
@@ -1757,7 +1763,7 @@
             </div>
           </article>
 
-          <article class="gcc-process-card" data-index="2" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
+          <article class="gcc-process-card ts-keep-dark" data-index="2" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
             <div class="gcc-active-card-content gcc-simple-active">
               <h3>Three-Stage Vetting — Before You See Anyone</h3>
               <div class="gcc-active-card-bottom">
@@ -1775,7 +1781,7 @@
             </div>
           </article>
 
-          <article class="gcc-process-card" data-index="3" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
+          <article class="gcc-process-card ts-keep-dark" data-index="3" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
             <div class="gcc-active-card-content gcc-simple-active">
               <h3>You Approve. We Onboard.</h3>
               <div class="gcc-active-card-bottom">
@@ -1793,7 +1799,7 @@
             </div>
           </article>
 
-          <article class="gcc-process-card" data-index="4" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
+          <article class="gcc-process-card ts-keep-dark" data-index="4" style="--bg: url('https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/843ef6672181a9ff7005f46b3e22b657bbc64471.jpg')" role="button" tabindex="0" aria-expanded="false">
             <div class="gcc-active-card-content gcc-simple-active">
               <h3>Delivery Begins. We Manage. You Scale.</h3>
               <div class="gcc-active-card-bottom">
@@ -1817,7 +1823,7 @@
     </section>
 
     <!-- WHY THIS MODEL WORKS -->
-    <section class="gcc-model-works">
+    <section class="gcc-model-works ts-light-section">
       <div class="gcc-container">
         <div class="gcc-model-head">
           <div>
@@ -1831,10 +1837,10 @@
         </div>
 
         <div class="gcc-model-grid">
-          <article class="gcc-model-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png" alt="" loading="lazy" /></span><h3>Single Point of Contact</h3><span class="gcc-card-line"></span><p>Our Lead ensures clear communication and consistent delivery — no confusion.</p></article>
-          <article class="gcc-model-card"><span class="gcc-model-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor"/><path d="M9 9l6 3-3 2-1 4-2-9Z" stroke="currentColor"/></svg></span><h3>Outcome-Driven Delivery</h3><span class="gcc-card-line"></span><p>We drive results with clear deliverables, KPIs, SLAs, and accountability from day one.</p></article>
-          <article class="gcc-model-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Signal-Full%20Streamline%20Sharp.png" alt="" loading="lazy" /></span><h3>Transparent Operations</h3><span class="gcc-card-line"></span><p>We provide complete visibility through weekly updates, MBRs and QBRs.</p></article>
-          <article class="gcc-model-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Trending-Up%20Streamline%20Outlined-Streamline-Material-Free.png" alt="" loading="lazy" /></span><h3>Built to Scale</h3><span class="gcc-card-line"></span><p>Easily expand or restructure your team as your business grows and needs evolve.</p></article>
+          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/User-Circle-Check-Thin%20Streamline%20Phosphor-Thin.png" alt="" loading="lazy" /></span><h3>Single Point of Contact</h3><span class="gcc-card-line"></span><p>Our Lead ensures clear communication and consistent delivery — no confusion.</p></article>
+          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor"/><path d="M9 9l6 3-3 2-1 4-2-9Z" stroke="currentColor"/></svg></span><h3>Outcome-Driven Delivery</h3><span class="gcc-card-line"></span><p>We drive results with clear deliverables, KPIs, SLAs, and accountability from day one.</p></article>
+          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Signal-Full%20Streamline%20Sharp.png" alt="" loading="lazy" /></span><h3>Transparent Operations</h3><span class="gcc-card-line"></span><p>We provide complete visibility through weekly updates, MBRs and QBRs.</p></article>
+          <article class="gcc-model-card ts-soft-card"><span class="gcc-model-icon"><img src="https://raw.githubusercontent.com/Muhammad-Aarij/TOPSOIL/main/assets/service/Trending-Up%20Streamline%20Outlined-Streamline-Material-Free.png" alt="" loading="lazy" /></span><h3>Built to Scale</h3><span class="gcc-card-line"></span><p>Easily expand or restructure your team as your business grows and needs evolve.</p></article>
         </div>
       </div>
     </section>
