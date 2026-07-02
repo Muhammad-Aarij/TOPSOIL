@@ -88,6 +88,13 @@
       box-shadow: 0 0 18px rgba(91, 220, 148, 0.25);
     }
 
+    .pill-icon img {
+      width: 13px;
+      height: 13px;
+      display: block;
+      object-fit: contain;
+    }
+
     .global-footprint-head h2 {
       margin: 34px 0 0;
       color: #ffffff;
@@ -117,20 +124,14 @@
 
     .map-scroll {
       width: 100%;
-      overflow-x: auto;
-      overflow-y: visible;
-      scrollbar-width: none;
+      overflow: visible;
       padding-top: 20px;
-    }
-
-    .map-scroll::-webkit-scrollbar {
-      display: none;
     }
 
     .global-map-image {
       display: block;
-      width: min(100%, 1480px);
-      min-width: 1080px;
+      width: min(85%, 1480px);
+      max-width: 100%;
       height: auto;
       margin: 0 auto;
       user-select: none;
@@ -140,20 +141,24 @@
     @media (max-width: 1024px) {
       .global-footprint-section {
         padding: 80px 16px 76px;
+        display: flex;
       }
 
       .map-wrap {
         margin-top: 64px;
-      }
-
-      .global-map-image {
-        min-width: 1080px;
       }
     }
 
     @media (max-width: 768px) {
       .global-footprint-section {
         padding: 72px 14px 70px;
+                display: flex;
+
+      }
+      .global-footprint-container{
+            display: flex;
+    flex-direction: column;
+    justify-content: center;
       }
 
       .global-footprint-head h2 {
@@ -173,7 +178,7 @@
       }
 
       .global-map-image {
-        min-width: 1040px;
+        width: 100%;
       }
     }
   </style>
@@ -184,7 +189,12 @@
     <div class="global-footprint-container">
       <div class="global-footprint-head">
         <div class="global-footprint-pill">
-          <span class="pill-icon">↗</span>
+          <span class="pill-icon">
+            <img
+              src="./Globe-Asia-Fill Streamline Outlined-Fill-Streamline-Material-Free.svg"
+              alt=""
+            />
+          </span>
           <span><strong>Global</strong> Presence</span>
         </div>
 
