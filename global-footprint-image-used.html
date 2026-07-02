@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Global Footprint</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #000d25;
+      color: #ffffff;
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .global-footprint-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      padding: 70px 20px 70px;
+      overflow: hidden;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(27, 89, 150, 0.34), transparent 34%),
+        radial-gradient(circle at 15% 47%, rgba(28, 118, 124, 0.12), transparent 30%),
+        radial-gradient(circle at 85% 52%, rgba(22, 85, 150, 0.12), transparent 30%),
+        #000d25;
+    }
+
+    .global-footprint-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1540px;
+      margin: 0 auto;
+    }
+
+    .global-footprint-head {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 5;
+    }
+
+    .global-footprint-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 16px;
+      border-radius: 11px;
+      color: #48cf8d;
+      background: rgba(7, 31, 69, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.035);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 18px 48px rgba(0, 0, 0, 0.16);
+      font-size: 15px;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .global-footprint-pill strong {
+      color: #62e99f;
+      font-weight: 600;
+      letter-spacing: 0.1px;
+    }
+
+    .pill-icon {
+      width: 22px;
+      height: 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #5bdc94;
+      color: #061833;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 0 18px rgba(91, 220, 148, 0.25);
+    }
+
+    .global-footprint-head h2 {
+      margin: 34px 0 0;
+      color: #ffffff;
+      font-size: clamp(33px, 4.9vw, 48px);
+      line-height: 1.07;
+      font-weight: 500;
+      letter-spacing: -2.8px;
+      text-shadow: 0 16px 42px rgba(0, 0, 0, 0.28);
+    }
+
+    .global-footprint-head p {
+      max-width: 760px;
+      margin: 26px auto 0;
+      color: #A5A5A5;
+      font-size: clamp(16px, 1.6vw, 20px);
+      line-height: 1.42;
+      font-weight: 300;
+      letter-spacing: -0.45px;
+    }
+
+    .map-wrap {
+      position: relative;
+      width: 100%;
+      margin-top: 72px;
+      overflow: visible;
+    }
+
+    .map-scroll {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: visible;
+      scrollbar-width: none;
+      padding-top: 20px;
+    }
+
+    .map-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .global-map-image {
+      display: block;
+      width: min(100%, 1480px);
+      min-width: 1080px;
+      height: auto;
+      margin: 0 auto;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    @media (max-width: 1024px) {
+      .global-footprint-section {
+        padding: 80px 16px 76px;
+      }
+
+      .map-wrap {
+        margin-top: 64px;
+      }
+
+      .global-map-image {
+        min-width: 1080px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .global-footprint-section {
+        padding: 72px 14px 70px;
+      }
+
+      .global-footprint-head h2 {
+        margin-top: 28px;
+        font-size: 38px;
+        letter-spacing: -1.8px;
+      }
+
+      .global-footprint-head p {
+        margin-top: 20px;
+        font-size: 15.5px;
+        line-height: 1.55;
+      }
+
+      .map-wrap {
+        margin-top: 54px;
+      }
+
+      .global-map-image {
+        min-width: 1040px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="global-footprint-section">
+    <div class="global-footprint-container">
+      <div class="global-footprint-head">
+        <div class="global-footprint-pill">
+          <span class="pill-icon">↗</span>
+          <span><strong>Global</strong> Presence</span>
+        </div>
+
+        <h2>Our Global Footprint</h2>
+
+        <p>
+          We connect businesses with top talent across key global regions
+          enabling faster hiring and distributed team success.
+        </p>
+      </div>
+
+      <div class="map-wrap">
+        <div class="map-scroll">
+          <img
+            class="global-map-image"
+            src="./global-footprint-map-bird-transparent (1).svg"
+            alt="Dotted world map showing US, UAE, Saudia Arabia, and Pakistan"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
